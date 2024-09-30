@@ -4,8 +4,12 @@
   "description": "Taking all Points within a fixed distance.",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:api": "node index.js",
+    "dev:gui": "cd gui && vite",
+    "build": "cd gui && vite build",
     "start": "node index.js",
-    "test": "test"
+    "start:prod": "npm run build && npm run start"
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,12 @@
   "homepage": "https://cleaker.me",
   "dependencies": {
     "cleaker": "^2.5.6",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "concurrently": "^7.0.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
