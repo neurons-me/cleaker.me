@@ -1,0 +1,207 @@
+{"timestamp":"2024-10-23T21:32:53.500Z","level":"info","code":"USER_SIGNUP_002","username":"rucurucu1","email":"nono@gmail.com","message":"New user request initiated: rucurucu1"}
+{"timestamp":"2024-10-23T21:32:53.524Z","level":"warn","code":"USER_SIGNUP_003","email":"nono@gmail.com","message":"Email already in use: nono@gmail.com"}
+{"timestamp":"2024-10-23T21:33:06.924Z","level":"info","code":"USER_SIGNUP_002","username":"rucurucu1","email":"nono1@gmail.com","message":"New user request initiated: rucurucu1"}
+{"timestamp":"2024-10-23T21:33:06.927Z","level":"info","code":"USER_SIGNUP_005","username":"rucurucu1","message":"Creating a new user: rucurucu1"}
+{"timestamp":"2024-10-23T21:33:06.937Z","level":"info","code":"USER_SIGNUP_006","username":"rucurucu1","email":"nono1@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-10-23T21:43:24.117Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T21:43:24.125Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-23T21:43:24.128Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T21:43:24.130Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-23T21:44:41.682Z","level":"info","code":"USER_SIGNUP_002","username":"nadaquever","email":"nadaquever@gmail.com","message":"New user request initiated: nadaquever"}
+{"timestamp":"2024-10-23T21:44:41.697Z","level":"info","code":"USER_SIGNUP_006","username":"nadaquever","email":"nadaquever@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-10-23T21:44:44.419Z","level":"info","code":"USER_SIGNUP_002","username":"nadaquever","email":"nadaquever@gmail.com","message":"New user request initiated: nadaquever"}
+{"timestamp":"2024-10-23T21:44:44.423Z","level":"warn","code":"USER_SIGNUP_001","username":"nadaquever","message":"Username already taken: nadaquever"}
+{"timestamp":"2024-10-23T21:46:27.152Z","level":"info","code":"USER_SIGNUP_002","username":"nadaquever11","email":"nadaquever@gmail.com","message":"New user request initiated: nadaquever11"}
+{"timestamp":"2024-10-23T21:46:27.155Z","level":"warn","code":"USER_SIGNUP_003","email":"nadaquever@gmail.com","message":"Email already in use: nadaquever@gmail.com"}
+{"timestamp":"2024-10-23T21:46:36.536Z","level":"info","code":"USER_SIGNUP_002","username":"nadaquever11","email":"nadaqueve1r@gmail.com","message":"New user request initiated: nadaquever11"}
+{"timestamp":"2024-10-23T21:46:36.559Z","level":"info","code":"USER_SIGNUP_006","username":"nadaquever11","email":"nadaqueve1r@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-10-23T21:47:04.876Z","level":"info","code":"PROFILE_VIEW_001","username":"suignaaaaa","message":"Profile view request for suignaaaaa"}
+{"timestamp":"2024-10-23T21:47:04.879Z","level":"warn","code":"PROFILE_VIEW_003","username":"suignaaaaa","message":"User not found for suignaaaaa"}
+{"timestamp":"2024-10-23T21:47:04.881Z","level":"info","code":"PROFILE_VIEW_001","username":"suignaaaaa","message":"Profile view request for suignaaaaa"}
+{"timestamp":"2024-10-23T21:47:04.883Z","level":"warn","code":"PROFILE_VIEW_003","username":"suignaaaaa","message":"User not found for suignaaaaa"}
+{"timestamp":"2024-10-23T21:47:05.559Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T21:47:05.562Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-23T21:47:05.564Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T21:47:05.567Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-23T22:23:51.621Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T22:23:51.624Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-23T22:23:51.625Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T22:23:51.627Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-23T22:23:55.044Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T22:23:55.048Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-23T22:23:55.049Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-23T22:23:55.053Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T17:48:18.831Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T17:48:18.865Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T17:48:18.872Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T17:48:18.874Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T17:48:21.475Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T17:48:21.479Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T17:48:21.484Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T17:48:21.487Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T18:01:49.326Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T18:01:49.340Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T18:01:49.341Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T18:01:49.342Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T18:51:23.334Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T18:51:23.342Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T18:51:23.346Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T18:51:23.348Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T18:53:22.270Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T18:53:22.291Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T18:53:22.292Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T18:53:22.295Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:17:04.548Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:17:04.582Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:17:04.583Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:17:04.586Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:17:27.785Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:17:27.790Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:17:27.792Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:17:27.793Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:17:51.939Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:17:51.954Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:17:51.955Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:17:51.958Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:19:14.993Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:19:15.007Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:19:15.011Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:19:15.013Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:24:55.802Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:24:55.817Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:26:08.636Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:26:08.650Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T19:26:08.652Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T19:26:08.655Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.449Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.454Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.455Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.458Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.512Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.519Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.523Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-25T21:26:56.525Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.594Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.628Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.630Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.631Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.632Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.633Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.634Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T01:19:10.638Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T15:58:05.581Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T15:58:05.618Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T15:58:05.620Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T15:58:05.622Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T16:11:17.110Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T16:11:17.116Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T16:11:19.854Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T16:11:19.857Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T16:11:19.858Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T16:11:19.860Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T16:13:10.490Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T16:13:10.494Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T16:19:19.055Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T16:19:19.056Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T16:20:19.228Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T16:20:19.246Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-26T16:20:19.247Z","level":"info","code":"PROFILE_VIEW_001","username":"jabellae","message":"Profile view request for jabellae"}
+{"timestamp":"2024-10-26T16:20:19.248Z","level":"info","code":"PROFILE_VIEW_002","username":"jabellae","message":"Profile successfully retrieved for jabellae"}
+{"timestamp":"2024-10-31T06:52:42.671Z","level":"info","code":"USER_SIGNUP_002","username":"sui.gn","email":"admin@neurons.me","message":"New user request initiated: sui.gn"}
+{"timestamp":"2024-10-31T06:52:42.673Z","level":"warn","code":"USER_VALIDATION_002","username":"sui.gn","error":"Cleaker.validateUsername is not a function","message":"Validation error for sui.gn: Cleaker.validateUsername is not a function"}
+{"timestamp":"2024-10-31T06:52:52.862Z","level":"info","code":"USER_SIGNUP_002","username":"sui.gn","email":"admin@neurons.me","message":"New user request initiated: sui.gn"}
+{"timestamp":"2024-10-31T06:52:52.863Z","level":"warn","code":"USER_VALIDATION_002","username":"sui.gn","error":"Cleaker.validateUsername is not a function","message":"Validation error for sui.gn: Cleaker.validateUsername is not a function"}
+{"timestamp":"2024-10-31T19:29:14.417Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae","email":"jabellae@gmail.com","message":"New user request initiated: jabellae"}
+{"timestamp":"2024-10-31T19:29:14.419Z","level":"warn","code":"USER_VALIDATION_002","username":"jabellae","error":"Cleaker.validateUsername is not a function","message":"Validation error for jabellae: Cleaker.validateUsername is not a function"}
+{"timestamp":"2024-10-31T20:31:57.781Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae","email":"jabellae@gmail.com","message":"New user request initiated: jabellae"}
+{"timestamp":"2024-10-31T20:31:57.783Z","level":"warn","code":"USER_VALIDATION_002","username":"jabellae","error":"Cleaker.validateEmail is not a function","message":"Validation error for jabellae: Cleaker.validateEmail is not a function"}
+{"timestamp":"2024-10-31T20:49:47.414Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae","email":"jabellae@gmail.com","message":"New user request initiated: jabellae"}
+{"timestamp":"2024-10-31T20:49:47.415Z","level":"warn","code":"USER_SIGNUP_004","username":"jabellae","message":"Password does not meet security requirements for jabellae"}
+{"timestamp":"2024-10-31T20:49:52.531Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae","email":"jabellae@gmail.com","message":"New user request initiated: jabellae"}
+{"timestamp":"2024-10-31T20:49:52.555Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae","message":"Username already taken: jabellae"}
+{"timestamp":"2024-10-31T20:49:56.894Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae2","email":"jabellae@gmail.com","message":"New user request initiated: jabellae2"}
+{"timestamp":"2024-10-31T20:49:56.898Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae2","message":"Username already taken: jabellae2"}
+{"timestamp":"2024-10-31T20:50:02.446Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae3","email":"jabellae@gmail.com","message":"New user request initiated: jabellae3"}
+{"timestamp":"2024-10-31T20:50:02.453Z","level":"warn","code":"USER_SIGNUP_003","email":"jabellae@gmail.com","message":"Email already in use: jabellae@gmail.com"}
+{"timestamp":"2024-10-31T20:50:06.362Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae3","email":"jabellae66@gmail.com","message":"New user request initiated: jabellae3"}
+{"timestamp":"2024-10-31T20:50:06.392Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae3","email":"jabellae66@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-10-31T21:46:50.254Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae4","email":"jabellae666@gmail.com","message":"New user request initiated: jabellae4"}
+{"timestamp":"2024-10-31T21:46:50.286Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae4","email":"jabellae666@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T02:38:28.528Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae","email":"jabellae@gmail.com","message":"New user request initiated: jabellae"}
+{"timestamp":"2024-11-01T02:38:28.528Z","level":"warn","code":"USER_SIGNUP_004","username":"jabellae","message":"Password does not meet security requirements for jabellae"}
+{"timestamp":"2024-11-01T02:38:36.325Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae","email":"jabellae@gmail.com","message":"New user request initiated: jabellae"}
+{"timestamp":"2024-11-01T02:38:36.333Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae","message":"Username already taken: jabellae"}
+{"timestamp":"2024-11-01T02:38:40.123Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae4","email":"jabellae@gmail.com","message":"New user request initiated: jabellae4"}
+{"timestamp":"2024-11-01T02:38:40.126Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae4","message":"Username already taken: jabellae4"}
+{"timestamp":"2024-11-01T02:38:47.157Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae5","email":"jabellae@gmail.com","message":"New user request initiated: jabellae5"}
+{"timestamp":"2024-11-01T02:38:47.160Z","level":"warn","code":"USER_SIGNUP_003","email":"jabellae@gmail.com","message":"Email already in use: jabellae@gmail.com"}
+{"timestamp":"2024-11-01T02:38:50.989Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae5","email":"jabellae5@gmail.com","message":"New user request initiated: jabellae5"}
+{"timestamp":"2024-11-01T02:38:51.000Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae5","email":"jabellae5@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T02:51:52.202Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae7","email":"jabellae7@gmail.com","message":"New user request initiated: jabellae7"}
+{"timestamp":"2024-11-01T02:51:52.210Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae7","email":"jabellae7@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T04:24:44.443Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae33","email":"jabellaeae@gmail.com","message":"New user request initiated: jabellae33"}
+{"timestamp":"2024-11-01T04:24:44.473Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae33","email":"jabellaeae@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T04:24:51.271Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae33","email":"jabellaeae@gmail.com","message":"New user request initiated: jabellae33"}
+{"timestamp":"2024-11-01T04:24:51.274Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae33","message":"Username already taken: jabellae33"}
+{"timestamp":"2024-11-01T04:24:55.676Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae34","email":"jabellaeae@gmail.com","message":"New user request initiated: jabellae34"}
+{"timestamp":"2024-11-01T04:24:55.679Z","level":"warn","code":"USER_SIGNUP_003","email":"jabellaeae@gmail.com","message":"Email already in use: jabellaeae@gmail.com"}
+{"timestamp":"2024-11-01T04:24:57.841Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae34","email":"jabellaeaer@gmail.com","message":"New user request initiated: jabellae34"}
+{"timestamp":"2024-11-01T04:24:57.847Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae34","email":"jabellaeaer@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T04:25:58.831Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae34","email":"jabellaeaer@gmail.com","message":"New user request initiated: jabellae34"}
+{"timestamp":"2024-11-01T04:25:58.834Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae34","message":"Username already taken: jabellae34"}
+{"timestamp":"2024-11-01T04:26:04.365Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae341","email":"jabellaeaeras@gmail.com","message":"New user request initiated: jabellae341"}
+{"timestamp":"2024-11-01T04:26:04.373Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae341","email":"jabellaeaeras@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T05:00:13.599Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae22323","email":"jaj@gmail.com","message":"New user request initiated: jabellae22323"}
+{"timestamp":"2024-11-01T05:00:13.608Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae22323","email":"jaj@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T05:01:16.521Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae223232","email":"jaj2@gmail.com","message":"New user request initiated: jabellae223232"}
+{"timestamp":"2024-11-01T05:01:16.537Z","level":"error","code":"USER_SIGNUP_007","username":"jabellae223232","email":"jaj2@gmail.com","error":"secretOrPrivateKey must have a value","message":"New User Creation Failed for jabellae223232: secretOrPrivateKey must have a value"}
+{"timestamp":"2024-11-01T05:12:31.515Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae223232","email":"jaj2@gmail.com","message":"New user request initiated: jabellae223232"}
+{"timestamp":"2024-11-01T05:12:31.525Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae223232","message":"Username already taken: jabellae223232"}
+{"timestamp":"2024-11-01T05:12:35.723Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae2232328","email":"jaj2@gmail.com","message":"New user request initiated: jabellae2232328"}
+{"timestamp":"2024-11-01T05:12:35.728Z","level":"warn","code":"USER_SIGNUP_003","email":"jaj2@gmail.com","message":"Email already in use: jaj2@gmail.com"}
+{"timestamp":"2024-11-01T05:12:38.899Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae2232328","email":"jaj200@gmail.com","message":"New user request initiated: jabellae2232328"}
+{"timestamp":"2024-11-01T05:12:38.921Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae2232328","email":"jaj200@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T05:18:40.700Z","level":"info","code":"USER_SIGNUP_002","username":"suign2112","email":"sui@gmail.com","message":"New user request initiated: suign2112"}
+{"timestamp":"2024-11-01T05:18:40.712Z","level":"info","code":"USER_SIGNUP_006","username":"suign2112","email":"sui@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T05:25:24.400Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae123123","email":"jabellae123123@gmail.com","message":"New user request initiated: jabellae123123"}
+{"timestamp":"2024-11-01T05:25:24.410Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae123123","email":"jabellae123123@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-01T05:27:00.117Z","level":"info","code":"USER_SIGNUP_002","username":"asdasdasd","email":"asdas@gmail.com","message":"New user request initiated: asdasdasd"}
+{"timestamp":"2024-11-01T05:27:00.117Z","level":"warn","code":"USER_SIGNUP_004","username":"asdasdasd","message":"Password does not meet security requirements for asdasdasd"}
+{"timestamp":"2024-11-01T05:27:06.067Z","level":"info","code":"USER_SIGNUP_002","username":"asdasdasd","email":"asdas@gmail.com","message":"New user request initiated: asdasdasd"}
+{"timestamp":"2024-11-01T05:27:06.077Z","level":"info","code":"USER_SIGNUP_006","username":"asdasdasd","email":"asdas@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T05:49:52.826Z","level":"info","code":"USER_SIGNUP_002","username":"jabellaee","email":"jabellaeee@gmail.com","message":"New user request initiated: jabellaee"}
+{"timestamp":"2024-11-02T05:49:52.873Z","level":"info","code":"USER_SIGNUP_006","username":"jabellaee","email":"jabellaeee@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T05:50:28.439Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae343","email":"jabellae2323@gmail.com","message":"New user request initiated: jabellae343"}
+{"timestamp":"2024-11-02T05:50:28.448Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae343","email":"jabellae2323@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T05:50:39.303Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae343","email":"jabellae2323@gmail.com","message":"New user request initiated: jabellae343"}
+{"timestamp":"2024-11-02T05:50:39.308Z","level":"warn","code":"USER_SIGNUP_001","username":"jabellae343","message":"Username already taken: jabellae343"}
+{"timestamp":"2024-11-02T05:52:32.703Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae34ee","email":"jabe@gmail.com","message":"New user request initiated: jabellae34ee"}
+{"timestamp":"2024-11-02T05:52:32.709Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae34ee","email":"jabe@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T06:03:11.996Z","level":"info","code":"USER_SIGNUP_002","username":"jabellae2323","email":"jabea@gmail.com","message":"New user request initiated: jabellae2323"}
+{"timestamp":"2024-11-02T06:03:12.011Z","level":"info","code":"USER_SIGNUP_006","username":"jabellae2323","email":"jabea@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T06:07:31.726Z","level":"info","code":"USER_SIGNUP_002","username":"jajaj","email":"jabelaerae@aasd.com","message":"New user request initiated: jajaj"}
+{"timestamp":"2024-11-02T06:07:31.745Z","level":"info","code":"USER_SIGNUP_006","username":"jajaj","email":"jabelaerae@aasd.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T06:12:21.969Z","level":"info","code":"USER_SIGNUP_002","username":"adasdasdasd","email":"asdasd@gmail.com","message":"New user request initiated: adasdasdasd"}
+{"timestamp":"2024-11-02T06:12:21.985Z","level":"info","code":"USER_SIGNUP_006","username":"adasdasdasd","email":"asdasd@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T06:23:50.972Z","level":"info","code":"USER_SIGNUP_002","username":"jojojo","email":"jojo@gmail.com","message":"New user request initiated: jojojo"}
+{"timestamp":"2024-11-02T06:23:50.996Z","level":"info","code":"USER_SIGNUP_006","username":"jojojo","email":"jojo@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T06:27:46.786Z","level":"info","code":"USER_SIGNUP_002","username":"asadasd","email":"asfasd@hotmail.com","message":"New user request initiated: asadasd"}
+{"timestamp":"2024-11-02T06:27:46.796Z","level":"info","code":"USER_SIGNUP_006","username":"asadasd","email":"asfasd@hotmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T07:40:21.975Z","level":"info","code":"USER_SIGNUP_002","username":"natsynapses","email":"natsynapses@gmail.com","message":"New user request initiated: natsynapses"}
+{"timestamp":"2024-11-02T07:40:21.981Z","level":"warn","code":"USER_SIGNUP_003","email":"natsynapses@gmail.com","message":"Email already in use: natsynapses@gmail.com"}
+{"timestamp":"2024-11-02T07:40:24.923Z","level":"info","code":"USER_SIGNUP_002","username":"natsynapses","email":"natsynapses1@gmail.com","message":"New user request initiated: natsynapses"}
+{"timestamp":"2024-11-02T07:40:24.941Z","level":"info","code":"USER_SIGNUP_006","username":"natsynapses","email":"natsynapses1@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T07:43:49.928Z","level":"info","code":"USER_SIGNUP_002","username":"natsynapses2","email":"natsynapses2@gmail.com","message":"New user request initiated: natsynapses2"}
+{"timestamp":"2024-11-02T07:43:49.935Z","level":"info","code":"USER_SIGNUP_006","username":"natsynapses2","email":"natsynapses2@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T07:45:32.356Z","level":"info","code":"USER_SIGNUP_002","username":"suigeneris","email":"jabellae@gmail.com","message":"New user request initiated: suigeneris"}
+{"timestamp":"2024-11-02T07:45:32.360Z","level":"warn","code":"USER_SIGNUP_003","email":"jabellae@gmail.com","message":"Email already in use: jabellae@gmail.com"}
+{"timestamp":"2024-11-02T07:45:35.326Z","level":"info","code":"USER_SIGNUP_002","username":"suigeneris","email":"jabellae2@gmail.com","message":"New user request initiated: suigeneris"}
+{"timestamp":"2024-11-02T07:45:35.335Z","level":"info","code":"USER_SIGNUP_006","username":"suigeneris","email":"jabellae2@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T07:47:39.876Z","level":"info","code":"USER_SIGNUP_002","username":"natsynapses1","email":"natsynapses22@gmail.com","message":"New user request initiated: natsynapses1"}
+{"timestamp":"2024-11-02T07:47:39.884Z","level":"info","code":"USER_SIGNUP_006","username":"natsynapses1","email":"natsynapses22@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T07:53:12.167Z","level":"info","code":"USER_SIGNUP_002","username":"suijuris","email":"suijuris@gmail.com","message":"New user request initiated: suijuris"}
+{"timestamp":"2024-11-02T07:53:12.176Z","level":"info","code":"USER_SIGNUP_006","username":"suijuris","email":"suijuris@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T07:55:41.368Z","level":"info","code":"USER_SIGNUP_002","username":"jarabedepalo","email":"jarabe@gmail.com","message":"New user request initiated: jarabedepalo"}
+{"timestamp":"2024-11-02T07:55:41.378Z","level":"info","code":"USER_SIGNUP_006","username":"jarabedepalo","email":"jarabe@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T08:11:01.727Z","level":"info","code":"USER_SIGNUP_002","username":"jajajo","email":"jajajo@gmail.com","message":"New user request initiated: jajajo"}
+{"timestamp":"2024-11-02T08:11:01.756Z","level":"info","code":"USER_SIGNUP_006","username":"jajajo","email":"jajajo@gmail.com","message":"User created successfully"}

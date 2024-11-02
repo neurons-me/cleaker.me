@@ -1,31 +1,14 @@
 {
-  "name": "cleaker.me",
-  "version": "2.1.0",
-  "description": "Taking all Points within a fixed distance.",
-  "homepage": "https://cleaker.me",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/suiGn/cleaker.me.git"
-  },
-  "keywords": [
-    "cleaker.me",
-    "neurons.me"
-  ],
-  "docs": "https://suiGn.github.io/cleaker",
-  "author": "suiGn",
-  "license": "MIT",
-  "repoType": "App",
-  "bugs": {
-    "url": "https://github.com/suiGn/cleaker.me/issues"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "cleaker": "../../../cleaker",
-    "this.me": "../../../all.this/workspaces/this.me"
+    "name": "cleaker.me",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "install-all": "npm install --prefix client && npm install --prefix server",
+      "start-client": "npm start --prefix client",
+      "start-server": "npm start --prefix server",
+      "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\""
+    },
+    "devDependencies": {
+      "concurrently": "^7.6.0"
+    }
   }
-}
