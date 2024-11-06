@@ -2,32 +2,31 @@
 import React, { useState } from 'react';
 import { Box, Typography, Button, Modal, useTheme } from '@mui/material';
 import { animated, useSpring } from '@react-spring/web';
-import CleakMe from '../components/CleakMe';
-import SignUp from '../components/SignUp';
+import Login from '../components/Login/Login';  // Updated to import Login
+import SignUp from '../components/SignUp/SignUp';
 
-export default function Welcome({ setIsLoggedIn }) { // Pass setIsLoggedIn from App
+export default function Welcome({ setIsLoggedIn }) {
   const theme = useTheme();
-  const [openCleakMe, setOpenCleakMe] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false); // Updated state name from openCleakMe to openLogin
   const [openSignUp, setOpenSignUp] = useState(false);
   const isLoggedIn = false; // Replace with actual session check logic if needed
   const username = "YourUsername"; // Replace with actual username if needed
 
-  const handleOpenCleakMe = () => {
-    setOpenCleakMe(true);
+  const handleOpenLogin = () => {
+    setOpenLogin(true);
     setOpenSignUp(false);
   };
 
   const handleOpenSignUp = () => {
     setOpenSignUp(true);
-    setOpenCleakMe(false);
+    setOpenLogin(false);
   };
 
   const handleClose = () => {
-    setOpenCleakMe(false);
+    setOpenLogin(false);
     setOpenSignUp(false);
   };
 
-  // Bounce and fade-in animation using react-spring
   const springProps = useSpring({
     from: { transform: 'translateY(-100px) scale(0.8)', opacity: 0 },
     to: { transform: 'translateY(0px) scale(1)', opacity: 1 },
@@ -45,7 +44,6 @@ export default function Welcome({ setIsLoggedIn }) { // Pass setIsLoggedIn from 
         backgroundColor: theme.palette.background.default,
       }}
     >
-      {/* Animated Box with Bounce Effect */}
       <animated.div style={springProps}>
         <Box
           sx={{
@@ -76,7 +74,7 @@ export default function Welcome({ setIsLoggedIn }) { // Pass setIsLoggedIn from 
           ) : (
             <Button
               variant="contained"
-              onClick={handleOpenCleakMe}
+              onClick={handleOpenLogin}
               sx={{
                 mt: 2,
                 width: 200,
@@ -92,8 +90,8 @@ export default function Welcome({ setIsLoggedIn }) { // Pass setIsLoggedIn from 
         </Box>
       </animated.div>
 
-      {/* Modal to show CleakMe component */}
-      <Modal open={openCleakMe} onClose={handleClose}>
+      {/* Modal to show Login component */}
+      <Modal open={openLogin} onClose={handleClose}>
         <Box
           sx={{
             position: 'absolute',
@@ -108,7 +106,7 @@ export default function Welcome({ setIsLoggedIn }) { // Pass setIsLoggedIn from 
             width: '100%',
           }}
         >
-          <CleakMe openSignUp={handleOpenSignUp} />
+          <Login openSignUp={handleOpenSignUp} /> {/* Pass openSignUp prop */}
         </Box>
       </Modal>
 
@@ -128,7 +126,7 @@ export default function Welcome({ setIsLoggedIn }) { // Pass setIsLoggedIn from 
             width: '100%',
           }}
         >
-          <SignUp openCleakMe={handleOpenCleakMe} setIsLoggedIn={setIsLoggedIn} /> {/* Pass setIsLoggedIn */}
+          <SignUp openLogin={handleOpenLogin} setIsLoggedIn={setIsLoggedIn} /> {/* Pass setIsLoggedIn */}
         </Box>
       </Modal>
     </Box>

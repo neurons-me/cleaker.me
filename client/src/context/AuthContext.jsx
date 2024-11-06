@@ -1,27 +1,44 @@
-// src/context/AuthContext.js
-import React, { createContext, useState, useContext, useEffect } from 'react';
-import { isSessionActive } from '../utils/session';
+// src/context/AuthContext.jsx
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
+export const useAuth = () => useContext(AuthContext);
 
-export function AuthProvider({ children }) {
+export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    setIsLoggedIn(isSessionActive());
+    // Retrieve user data from localStorage and parse if it exists
+    const storedUserData = localStorage.getItem('userData');
+    //console.log("Retrieved from localStorage:", storedUserData); // Debug log
+    if (storedUserData) {
+      try {
+        const parsedUserData = JSON.parse(storedUserData);
+        setUser(parsedUserData);
+        setIsLoggedIn(!!parsedUserData.token); // Check if a token exists
+        //console.log("AuthContext user set:", parsedUserData); // Debug log with full user data
+      } catch (error) {
+        console.error("Failed to parse userData from localStorage:", error);
+      }
+    }
   }, []);
 
-  const login = () => setIsLoggedIn(true);
+  const login = (userData) => {
+    setIsLoggedIn(true);
+    setUser(userData); // Store the user data in state
+    localStorage.setItem('userData', JSON.stringify(userData));
+  };
+
   const logout = () => {
-    document.cookie = 'cleakerToken=; Max-Age=0; path=/; domain=.cleaker.me';
     setIsLoggedIn(false);
+    setUser(null);
+    localStorage.removeItem('userData');
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login, logout }}>
+    <AuthContext.Provider value={{ isLoggedIn, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
-}
-
-export const useAuth = () => useContext(AuthContext);
+};

@@ -205,3 +205,106 @@
 {"timestamp":"2024-11-02T07:55:41.378Z","level":"info","code":"USER_SIGNUP_006","username":"jarabedepalo","email":"jarabe@gmail.com","message":"User created successfully"}
 {"timestamp":"2024-11-02T08:11:01.727Z","level":"info","code":"USER_SIGNUP_002","username":"jajajo","email":"jajajo@gmail.com","message":"New user request initiated: jajajo"}
 {"timestamp":"2024-11-02T08:11:01.756Z","level":"info","code":"USER_SIGNUP_006","username":"jajajo","email":"jajajo@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T08:14:19.561Z","level":"info","code":"USER_SIGNUP_002","username":"jaaaa3333","email":"jaaaa3333@gmail.com","message":"New user request initiated: jaaaa3333"}
+{"timestamp":"2024-11-02T08:14:19.574Z","level":"info","code":"USER_SIGNUP_006","username":"jaaaa3333","email":"jaaaa3333@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T20:54:47.277Z","level":"info","code":"USER_SIGNUP_002","username":"japones","email":"japones@gmail.com","message":"New user request initiated: japones"}
+{"timestamp":"2024-11-02T20:54:47.313Z","level":"info","code":"USER_SIGNUP_006","username":"japones","email":"japones@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:01:05.649Z","level":"info","code":"USER_SIGNUP_002","username":"japoneses","email":"japoneses@gmail.com","message":"New user request initiated: japoneses"}
+{"timestamp":"2024-11-02T21:01:05.664Z","level":"info","code":"USER_SIGNUP_006","username":"japoneses","email":"japoneses@gmail.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:03:49.371Z","level":"info","code":"USER_SIGNUP_002","username":"username","email":"username@username.com","message":"New user request initiated: username"}
+{"timestamp":"2024-11-02T21:03:49.387Z","level":"info","code":"USER_SIGNUP_006","username":"username","email":"username@username.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:09:15.548Z","level":"info","code":"USER_SIGNUP_002","username":"pulgarsito","email":"pulgarsito@pulgarsito.com","message":"New user request initiated: pulgarsito"}
+{"timestamp":"2024-11-02T21:09:15.557Z","level":"info","code":"USER_SIGNUP_006","username":"pulgarsito","email":"pulgarsito@pulgarsito.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:11:50.911Z","level":"info","code":"USER_SIGNUP_002","username":"pulgarsito","email":"pulgarsito@pulgarsito.com","message":"New user request initiated: pulgarsito"}
+{"timestamp":"2024-11-02T21:11:50.913Z","level":"warn","code":"USER_SIGNUP_004","username":"pulgarsito","message":"Password does not meet security requirements for pulgarsito"}
+{"timestamp":"2024-11-02T21:11:56.042Z","level":"info","code":"USER_SIGNUP_002","username":"pulgarsito","email":"pulgarsito@pulgarsito.com","message":"New user request initiated: pulgarsito"}
+{"timestamp":"2024-11-02T21:11:56.052Z","level":"warn","code":"USER_SIGNUP_001","username":"pulgarsito","message":"Username already taken: pulgarsito"}
+{"timestamp":"2024-11-02T21:12:00.241Z","level":"info","code":"USER_SIGNUP_002","username":"pulgarsito1","email":"pulgarsito@pulgarsito.com","message":"New user request initiated: pulgarsito1"}
+{"timestamp":"2024-11-02T21:12:00.244Z","level":"warn","code":"USER_SIGNUP_003","email":"pulgarsito@pulgarsito.com","message":"Email already in use: pulgarsito@pulgarsito.com"}
+{"timestamp":"2024-11-02T21:12:03.882Z","level":"info","code":"USER_SIGNUP_002","username":"pulgarsito1","email":"pulgarsito2@pulgarsito.com","message":"New user request initiated: pulgarsito1"}
+{"timestamp":"2024-11-02T21:12:03.896Z","level":"info","code":"USER_SIGNUP_006","username":"pulgarsito1","email":"pulgarsito2@pulgarsito.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:41:31.246Z","level":"info","code":"USER_SIGNUP_002","username":"larana","email":"con@rana.com","message":"New user request initiated: larana"}
+{"timestamp":"2024-11-02T21:41:31.272Z","level":"info","code":"USER_SIGNUP_006","username":"larana","email":"con@rana.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:52:55.518Z","level":"info","code":"USER_SIGNUP_002","username":"panchoap","email":"pancho@pancho.com","message":"New user request initiated: panchoap"}
+{"timestamp":"2024-11-02T21:52:55.542Z","level":"info","code":"USER_SIGNUP_006","username":"panchoap","email":"pancho@pancho.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:54:50.872Z","level":"info","code":"USER_SIGNUP_002","username":"francisco","email":"panchoho@villa.com","message":"New user request initiated: francisco"}
+{"timestamp":"2024-11-02T21:54:50.880Z","level":"info","code":"USER_SIGNUP_006","username":"francisco","email":"panchoho@villa.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T21:59:29.523Z","level":"info","code":"USER_SIGNUP_002","username":"javiera","email":"javiera@javiera.com","message":"New user request initiated: javiera"}
+{"timestamp":"2024-11-02T21:59:29.532Z","level":"info","code":"USER_SIGNUP_006","username":"javiera","email":"javiera@javiera.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T22:10:22.997Z","level":"info","code":"USER_SIGNUP_002","username":"pytagoras","email":"pytagoras@pytagoras.com","message":"New user request initiated: pytagoras"}
+{"timestamp":"2024-11-02T22:10:23.006Z","level":"info","code":"USER_SIGNUP_006","username":"pytagoras","email":"pytagoras@pytagoras.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T22:22:15.449Z","level":"info","code":"USER_SIGNUP_002","username":"romann","email":"romann@gmai.com","message":"New user request initiated: romann"}
+{"timestamp":"2024-11-02T22:22:15.459Z","level":"info","code":"USER_SIGNUP_006","username":"romann","email":"romann@gmai.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T22:29:23.498Z","level":"info","code":"USER_SIGNUP_002","username":"ratonvaquero","email":"ratonvaquero@vaquero.com","message":"New user request initiated: ratonvaquero"}
+{"timestamp":"2024-11-02T22:29:23.507Z","level":"info","code":"USER_SIGNUP_006","username":"ratonvaquero","email":"ratonvaquero@vaquero.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T22:44:26.628Z","level":"info","code":"USER_SIGNUP_002","username":"juanito","email":"peres@juanito.com","message":"New user request initiated: juanito"}
+{"timestamp":"2024-11-02T22:44:26.637Z","level":"info","code":"USER_SIGNUP_006","username":"juanito","email":"peres@juanito.com","message":"User created successfully"}
+{"timestamp":"2024-11-02T22:47:00.922Z","level":"info","code":"USER_SIGNUP_002","username":"romeo","email":"romeo@romeo.com","message":"New user request initiated: romeo"}
+{"timestamp":"2024-11-02T22:47:00.932Z","level":"info","code":"USER_SIGNUP_006","username":"romeo","email":"romeo@romeo.com","message":"User created successfully"}
+{"timestamp":"2024-11-03T02:14:47.784Z","level":"info","code":"USER_SIGNUP_002","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"New user request initiated: rodolfo"}
+{"timestamp":"2024-11-03T02:14:47.842Z","level":"error","code":"USER_SIGNUP_007","username":"rodolfo","email":"rodolfo@rodolfo.com","error":"Cannot read properties of undefined (reading 'words')","message":"User creation failed: Cannot read properties of undefined (reading 'words')"}
+{"timestamp":"2024-11-03T02:15:42.107Z","level":"info","code":"USER_SIGNUP_002","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"New user request initiated: rodolfo"}
+{"timestamp":"2024-11-03T02:15:42.157Z","level":"error","code":"USER_SIGNUP_007","username":"rodolfo","email":"rodolfo@rodolfo.com","error":"Cannot read properties of undefined (reading 'words')","message":"User creation failed: Cannot read properties of undefined (reading 'words')"}
+{"timestamp":"2024-11-03T02:15:46.011Z","level":"info","code":"USER_SIGNUP_002","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"New user request initiated: rodolfo"}
+{"timestamp":"2024-11-03T02:15:46.027Z","level":"error","code":"USER_SIGNUP_007","username":"rodolfo","email":"rodolfo@rodolfo.com","error":"Cannot read properties of undefined (reading 'words')","message":"User creation failed: Cannot read properties of undefined (reading 'words')"}
+{"timestamp":"2024-11-03T02:17:16.304Z","level":"info","code":"USER_SIGNUP_002","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"New user request initiated: rodolfo"}
+{"timestamp":"2024-11-03T02:17:16.320Z","level":"error","code":"USER_SIGNUP_007","username":"rodolfo","email":"rodolfo@rodolfo.com","error":"Cannot read properties of undefined (reading 'words')","message":"User creation failed: Cannot read properties of undefined (reading 'words')"}
+{"timestamp":"2024-11-03T02:17:28.063Z","level":"info","code":"USER_SIGNUP_002","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"New user request initiated: rodolfo"}
+{"timestamp":"2024-11-03T02:17:28.126Z","level":"error","code":"USER_SIGNUP_007","username":"rodolfo","email":"rodolfo@rodolfo.com","error":"Encryption secret not set in environment variables","message":"User creation failed: Encryption secret not set in environment variables"}
+{"timestamp":"2024-11-03T02:18:29.846Z","level":"info","code":"USER_SIGNUP_002","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"New user request initiated: rodolfo"}
+{"timestamp":"2024-11-03T02:18:29.863Z","level":"error","code":"USER_SIGNUP_007","username":"rodolfo","email":"rodolfo@rodolfo.com","error":"Encryption secret not set in environment variables","message":"User creation failed: Encryption secret not set in environment variables"}
+{"timestamp":"2024-11-03T02:19:49.372Z","level":"info","code":"USER_SIGNUP_002","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"New user request initiated: rodolfo"}
+{"timestamp":"2024-11-03T02:19:49.430Z","level":"info","code":"USER_SIGNUP_006","username":"rodolfo","email":"rodolfo@rodolfo.com","message":"User created successfully"}
+{"timestamp":"2024-11-03T02:30:32.668Z","level":"info","code":"USER_SIGNUP_002","username":"pitagoras","email":"pitagoras@pitagoras.com","message":"New user request initiated: pitagoras"}
+{"timestamp":"2024-11-03T02:30:32.729Z","level":"info","code":"USER_SIGNUP_006","username":"pitagoras","email":"pitagoras@pitagoras.com","message":"User created successfully"}
+{"timestamp":"2024-11-03T02:36:30.249Z","level":"info","code":"USER_SIGNUP_002","username":"rabano","email":"rabano@rabano.com","message":"New user request initiated: rabano"}
+{"timestamp":"2024-11-03T02:36:30.332Z","level":"info","code":"USER_SIGNUP_006","username":"rabano","email":"rabano@rabano.com","message":"User created successfully"}
+{"timestamp":"2024-11-04T00:59:54.082Z","level":"info","code":"USER_SIGNUP_002","username":"rabbit","email":"rabbit@rabbit.com","message":"New user request initiated: rabbit"}
+{"timestamp":"2024-11-04T00:59:54.147Z","level":"info","code":"USER_SIGNUP_006","username":"rabbit","email":"rabbit@rabbit.com","message":"User created successfully"}
+{"timestamp":"2024-11-04T21:35:36.576Z","level":"info","code":"USER_SIGNUP_002","username":"newuser","email":"newuser@example.com","message":"New user request initiated: newuser"}
+{"timestamp":"2024-11-04T21:35:36.603Z","level":"info","code":"PROFILE_VIEW_001","username":"testuser","message":"Profile view request for testuser"}
+{"timestamp":"2024-11-04T21:35:36.605Z","level":"warn","code":"PROFILE_VIEW_003","username":"testuser","message":"User not found for testuser"}
+{"timestamp":"2024-11-04T21:51:00.261Z","level":"info","code":"USER_SIGNUP_002","username":"newuser","email":"newuser@example.com","message":"New user request initiated: newuser"}
+{"timestamp":"2024-11-04T21:51:00.287Z","level":"info","code":"PROFILE_VIEW_001","username":"testuser","message":"Profile view request for testuser"}
+{"timestamp":"2024-11-04T21:51:00.288Z","level":"warn","code":"PROFILE_VIEW_003","username":"testuser","message":"User not found for testuser"}
+{"timestamp":"2024-11-04T21:52:07.432Z","level":"info","code":"USER_SIGNUP_002","username":"newuser","email":"newuser@example.com","message":"New user request initiated: newuser"}
+{"timestamp":"2024-11-04T21:52:07.461Z","level":"info","code":"PROFILE_VIEW_001","username":"testuser","message":"Profile view request for testuser"}
+{"timestamp":"2024-11-04T21:52:07.462Z","level":"warn","code":"PROFILE_VIEW_003","username":"testuser","message":"User not found for testuser"}
+{"timestamp":"2024-11-04T21:52:48.164Z","level":"info","code":"USER_SIGNUP_002","username":"newuser","email":"newuser@example.com","message":"New user request initiated: newuser"}
+{"timestamp":"2024-11-04T21:52:48.235Z","level":"info","code":"USER_SIGNUP_006","username":"newuser","email":"newuser@example.com","message":"User created successfully"}
+{"timestamp":"2024-11-04T21:52:48.251Z","level":"info","code":"PROFILE_VIEW_001","username":"testuser","message":"Profile view request for testuser"}
+{"timestamp":"2024-11-04T21:52:48.251Z","level":"warn","code":"PROFILE_VIEW_003","username":"testuser","message":"User not found for testuser"}
+{"timestamp":"2024-11-04T22:00:39.840Z","level":"info","code":"USER_SIGNUP_002","username":"newuser","email":"newuser@example.com","message":"New user request initiated: newuser"}
+{"timestamp":"2024-11-04T22:00:39.860Z","level":"info","code":"PROFILE_VIEW_001","username":"testuser","message":"Profile view request for testuser"}
+{"timestamp":"2024-11-04T22:00:39.861Z","level":"warn","code":"PROFILE_VIEW_003","username":"testuser","message":"User not found for testuser"}
+{"timestamp":"2024-11-04T22:01:09.958Z","level":"info","code":"USER_SIGNUP_002","username":"newuser1","email":"newuse1r@example.com","message":"New user request initiated: newuser1"}
+{"timestamp":"2024-11-04T22:01:10.013Z","level":"info","code":"USER_SIGNUP_006","username":"newuser1","email":"newuse1r@example.com","message":"User created successfully"}
+{"timestamp":"2024-11-04T22:01:10.028Z","level":"info","code":"PROFILE_VIEW_001","username":"testuser","message":"Profile view request for testuser"}
+{"timestamp":"2024-11-04T22:01:10.028Z","level":"warn","code":"PROFILE_VIEW_003","username":"testuser","message":"User not found for testuser"}
+{"timestamp":"2024-11-04T22:03:53.455Z","level":"info","code":"USER_SIGNUP_002","username":"newuser1","email":"newuse1r@example.com","message":"New user request initiated: newuser1"}
+{"timestamp":"2024-11-04T22:03:53.494Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-04T22:03:53.495Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}
+{"timestamp":"2024-11-05T02:52:48.348Z","level":"info","code":"USER_SIGNUP_002","username":"newusessre1","email":"newuse1sser@example.com","message":"New user request initiated: newusessre1"}
+{"timestamp":"2024-11-05T02:52:48.414Z","level":"info","code":"USER_SIGNUP_006","username":"newusessre1","email":"newuse1sser@example.com","message":"User created successfully"}
+{"timestamp":"2024-11-05T02:52:48.439Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-05T02:52:48.441Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}
+{"timestamp":"2024-11-05T02:54:30.946Z","level":"info","code":"USER_SIGNUP_002","username":"newusessre1","email":"newuse1sser@example.com","message":"New user request initiated: newusessre1"}
+{"timestamp":"2024-11-05T02:54:30.971Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-05T02:54:30.972Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}
+{"timestamp":"2024-11-05T02:59:14.538Z","level":"info","code":"USER_SIGNUP_002","username":"newusessre1","email":"newuse1sser@example.com","message":"New user request initiated: newusessre1"}
+{"timestamp":"2024-11-05T02:59:14.568Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-05T02:59:14.569Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}
+{"timestamp":"2024-11-05T03:32:49.126Z","level":"info","code":"USER_SIGNUP_002","username":"newusessre1","email":"newuse1sser@example.com","message":"New user request initiated: newusessre1"}
+{"timestamp":"2024-11-05T03:32:49.156Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-05T03:32:49.157Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}
+{"timestamp":"2024-11-05T03:38:25.577Z","level":"info","code":"USER_SIGNUP_002","username":"newusessre1","email":"newuse1sser@example.com","message":"New user request initiated: newusessre1"}
+{"timestamp":"2024-11-05T03:38:25.622Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-05T03:38:25.623Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}
+{"timestamp":"2024-11-05T03:41:46.931Z","level":"info","code":"USER_SIGNUP_002","username":"newusessre1","email":"newuse1sser@example.com","message":"New user request initiated: newusessre1"}
+{"timestamp":"2024-11-05T03:41:46.965Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-05T03:41:46.966Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}
+{"timestamp":"2024-11-05T17:10:47.750Z","level":"info","code":"USER_SIGNUP_002","username":"amigos","email":"amigos@amigos.com","message":"New user request initiated: amigos"}
+{"timestamp":"2024-11-05T17:10:47.882Z","level":"info","code":"USER_SIGNUP_006","username":"amigos","email":"amigos@amigos.com","message":"User created successfully"}
+{"timestamp":"2024-11-06T18:19:49.552Z","level":"info","code":"USER_SIGNUP_002","username":"newusessre1","email":"newuse1sser@example.com","message":"New user request initiated: newusessre1"}
+{"timestamp":"2024-11-06T18:19:49.611Z","level":"info","code":"PROFILE_VIEW_001","username":"rabano","message":"Profile view request for rabano"}
+{"timestamp":"2024-11-06T18:19:49.613Z","level":"info","code":"PROFILE_VIEW_002","username":"rabano","message":"Profile successfully retrieved for rabano"}

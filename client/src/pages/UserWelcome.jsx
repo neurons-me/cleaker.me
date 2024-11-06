@@ -4,14 +4,19 @@ import { useSearchParams } from 'react-router-dom';
 import { Box, Typography, Divider, Button, Modal } from '@mui/material';
 import Grid2 from '@mui/material/Grid2';
 import FaceScan from '../components/FaceScan/FaceScan';
+import CreateWallet from '../components/Wallet/CreateWallet';
 
 export default function UserWelcome() {
   const [searchParams] = useSearchParams();
   const username = searchParams.get('username');
   const [isFaceScanOpen, setIsFaceScanOpen] = useState(false);
+  const [isCreateWalletOpen, setIsCreateWalletOpen] = useState(false);
 
   const handleOpenFaceScan = () => setIsFaceScanOpen(true);
   const handleCloseFaceScan = () => setIsFaceScanOpen(false);
+
+  const handleOpenCreateWallet = () => setIsCreateWalletOpen(true);
+  const handleCloseCreateWallet = () => setIsCreateWalletOpen(false);
 
   return (
     <Box
@@ -87,51 +92,10 @@ export default function UserWelcome() {
                 height: '100%',
                 cursor: 'pointer',
               }}
+              onClick={handleOpenCreateWallet}
             >
               <Typography variant="body1" align="center">
-                Verify Email
-              </Typography>
-            </Box>
-          </Grid2>
-
-          <Grid2 xs={6}>
-            <Box
-              sx={{
-                p: 2,
-                border: 1,
-                borderColor: 'divider',
-                borderRadius: 1,
-                bgcolor: 'background.paper',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '100%',
-                cursor: 'pointer',
-              }}
-            >
-              <Typography variant="body1" align="center">
-                Find and Invite Contacts
-              </Typography>
-            </Box>
-          </Grid2>
-
-          <Grid2 xs={6}>
-            <Box
-              sx={{
-                p: 2,
-                border: 1,
-                borderColor: 'divider',
-                borderRadius: 1,
-                bgcolor: 'background.paper',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '100%',
-                cursor: 'pointer',
-              }}
-            >
-              <Typography variant="body1" align="center">
-                Create a Wallet
+                + Add Wallet
               </Typography>
             </Box>
           </Grid2>
@@ -166,14 +130,34 @@ export default function UserWelcome() {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             width: '80%',
-            maxWidth: 600,
+            maxWidth: 400,
             bgcolor: 'background.paper',
-            borderRadius: 2,
             boxShadow: 24,
             p: 4,
+            borderRadius: 2,
           }}
         >
           <FaceScan open={isFaceScanOpen} onClose={handleCloseFaceScan} />
+        </Box>
+      </Modal>
+
+      {/* CreateWallet Modal */}
+      <Modal open={isCreateWalletOpen} onClose={handleCloseCreateWallet}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '80%',
+            maxWidth: 400,
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+            p: 4,
+            borderRadius: 2,
+          }}
+        >
+          <CreateWallet onClose={handleCloseCreateWallet} />
         </Box>
       </Modal>
     </Box>

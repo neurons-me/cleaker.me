@@ -1,40 +1,43 @@
+// server/server.js
 import dotenv from 'dotenv';
 import express from 'express';
 import https from 'https';
 import http from 'http';
 import fs from 'fs';
-import { connectDB, Users } from './db/mongoDB.js';
 import cors from 'cors';
+import { connectDB } from './db/mongoDB.js';
 import wildcardUsernames from './scripts/wildcardUsernames.js';
-import profileViewHandler from './routes/profileViewHandler.js';
-import { cleakMe } from './routes/cleakMeHandler.js';
-import hashMeHandler from './routes/hashMeHandler.js';
-import { verifyEmail } from './routes/verifyEmailHandler.js';
+import router from './routes/index.js'; // Import the main router with all routes
+
 dotenv.config();
+
 const app = express();
+
+// CORS Configuration
+const corsOptions = {
+  origin: 'https://lvh.me:3000', // Allow requests only from this origin
+  credentials: true, // Allow credentials (cookies, authorization headers)
+};
+app.use(cors(corsOptions));
 app.use(express.json());
-app.use(cors());
 connectDB();
 app.use(wildcardUsernames);
 
-app.get('/user-profile/:username', profileViewHandler);
-app.post('/cleak-me', cleakMe);
-app.post('/hash-me', hashMeHandler);
-app.get('/verify-email', verifyEmail);
+// Apply main router to the root path
+app.use('/', router); // This now handles /login, /signUp, etc.
 
-// HTTPS options
+// HTTPS Configuration
 const httpsOptions = {
-    key: fs.readFileSync('/Users/abellae/lvh.key'),
-    cert: fs.readFileSync('/Users/abellae/lvh.crt'),
+  key: fs.readFileSync('/Users/abellae/lvh.key'),
+  cert: fs.readFileSync('/Users/abellae/lvh.crt'),
 };
 
-// Start HTTP server
+// Start HTTP and HTTPS Servers
 const httpPort = 3001;
 http.createServer(app).listen(httpPort, () => {
   console.log(`HTTP Server running at http://lvh.me:${httpPort}`);
 });
 
-// Start HTTPS server
 const httpsPort = 3443;
 https.createServer(httpsOptions, app).listen(httpsPort, () => {
   console.log(`HTTPS Server running at https://lvh.me:${httpsPort}`);

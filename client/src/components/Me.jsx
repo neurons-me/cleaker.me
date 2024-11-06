@@ -5,6 +5,7 @@ import {
   FormControl,
   InputLabel,
   Input,
+  Toolbar,
   Stack,
   Button,
   Divider,
@@ -85,6 +86,7 @@ export default function MyProfile() {
         color: 'text.primary',
       }}
     >
+            <Toolbar /> {/* Spacer */}
       <Stack
         spacing={4}
         sx={{

@@ -1,4 +1,4 @@
-import { Users } from '../db/mongoDB.js';
+import { Users } from '../db/Schemas/UserSchema.js';
 
 /**
  * Middleware to handle wildcard subdomains, including usernames with dots.

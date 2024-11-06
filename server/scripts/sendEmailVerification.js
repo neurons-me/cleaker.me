@@ -1,17 +1,20 @@
+// server/scripts/sendEmailVerification.js
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
-// Function to send the verification email
+dotenv.config(); // Loads environment variables from your .env file
+
 export async function sendVerificationEmail(email, token) {
   const transporter = nodemailer.createTransport({
-    service: 'gmail', // You can use other services or custom SMTP
+    service: 'gmail', // Can be other email services or custom SMTP
     auth: {
-      user: 'admin@neurons.me',  // Replace with your email
-      pass: 'b@Ch1685!!Orwell1984!!this.admin',   // Replace with your email password
+      user: process.env.EMAIL_USER,  // Environment variable for email
+      pass: process.env.EMAIL_PASS,  // Environment variable for email password
     },
   });
 
   const mailOptions = {
-    from: 'admin@neurons.me',
+    from: process.env.EMAIL_USER,
     to: email,
     subject: 'Verify your email',
     text: `Click the link to verify your email: http://localhost:3001/verify-email?token=${token}`,

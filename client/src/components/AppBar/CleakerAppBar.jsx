@@ -11,6 +11,8 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import ColorModeIcon from './ColorModeIcon';
 import SideMenuMobile from './SideMenuMobile';
 import SearchComponent from '../Search/SearchComponent';
+import MeCompact from '../Me/MeCompact';
+import Avatar from '@mui/material/Avatar';
 
 export default function CleakerAppBar({ isLoggedIn }) {
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ export default function CleakerAppBar({ isLoggedIn }) {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [open, setOpen] = useState(false);
-
+  const [showMeCompact, setShowMeCompact] = useState(false);
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -53,7 +55,7 @@ export default function CleakerAppBar({ isLoggedIn }) {
       onClose={() => handleMenuClose()}
     >
       <MenuItem onClick={() => handleMenuClose("/me")}>Channel</MenuItem>
-      <MenuItem onClick={() => handleMenuClose("/me")}>.Me</MenuItem>
+      <MenuItem onClick={() => handleMenuClose("/me")}>.me</MenuItem>
       <MenuItem onClick={() => handleMenuClose()}>Privacy & Settings</MenuItem>
       <MenuItem onClick={() => handleMenuClose("/me")}>Log Out</MenuItem>
     </Menu>
@@ -70,14 +72,7 @@ export default function CleakerAppBar({ isLoggedIn }) {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
+  
       <MenuItem>
         <IconButton size="large" aria-label="show 17 new notifications">
           <Badge badgeContent={17} color="error">
@@ -131,12 +126,10 @@ export default function CleakerAppBar({ isLoggedIn }) {
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
                   <img
                     src="/assets/cleaker_logo_circular.png"
-                    alt="My App Logo"
+                    alt="cleaker.me"
                     style={{ width: 34, height: 34, marginRight: 8 }}
                   />
-                  <Typography variant="h6" component="div" color="text.primary">
-                    Cleaker.me
-                  </Typography>
+              
                 </Link>
               </Box>
             </Box>
@@ -144,48 +137,53 @@ export default function CleakerAppBar({ isLoggedIn }) {
             <Box sx={{ flexGrow: 1 }} />
 
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              {isLoggedIn ? (
-                <>
-                  <IconButton aria-label="search" onClick={handleSearchClick}>
-                    <SearchIcon />
-                  </IconButton>
-                  <IconButton size="large" aria-label="show 4 new mails">
-                    <Badge badgeContent={4} color="error">
-                      <MailIcon />
-                    </Badge>
-                  </IconButton>
-                  <IconButton size="large" aria-label="show 17 new notifications">
-                    <Badge badgeContent={17} color="error">
-                      <NotificationsIcon />
-                    </Badge>
-                  </IconButton>
-                  <IconButton
-                    size="large"
-                    edge="end"
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    onClick={handleProfileMenuOpen}
-                  >
-                    <AccountCircle />
-                  </IconButton>
-                </>
-              ) : (
-                <ColorModeIcon />
-              )}
+            {isLoggedIn ? (
+  <>
+    <IconButton aria-label="search" onClick={handleSearchClick}>
+      <SearchIcon />
+    </IconButton>
+    <IconButton size="large" aria-label="show 17 new notifications">
+      <Badge badgeContent={17} color="error">
+        <NotificationsIcon />
+      </Badge>
+    </IconButton>
+    <IconButton onClick={() => setShowMeCompact(!showMeCompact)}>
+      <Avatar sm={{ bgcolor: 'primary.main' }}>.me</Avatar>
+    </IconButton>
+  </>
+) : (
+  <ColorModeIcon />
+)}
             </Box>
           </Toolbar>
         </AppBar>
       </animated.div>
 
-      {isLoggedIn && (
-        <>
-          {renderMobileMenu}
-          {renderMenu}
-          <SideMenuMobile open={open} toggleDrawer={toggleDrawer} />
-          <SearchComponent open={searchOpen} onClose={handleSearchClose} />
-        </>
-      )}
+ {/* Add MeCompact below AppBar based on showMeCompact state */}
+ {showMeCompact && (
+    <Box sx={{
+      position: 'fixed',
+      top: '64px', // Adjust this value based on AppBar height
+      right: '16px',
+      zIndex: 1201, // Ensure it appears above other components
+      bgcolor: 'background.paper',
+      boxShadow: 3,
+      borderRadius: 2,
+      p: 2,
+    }}>
+      <MeCompact />
     </Box>
+  )}
+
+  {/* Render mobile menu, search component, etc., below */}
+  {isLoggedIn && (
+    <>
+      {renderMobileMenu}
+      {renderMenu}
+      <SideMenuMobile open={open} toggleDrawer={toggleDrawer} />
+      <SearchComponent open={searchOpen} onClose={handleSearchClose} />
+    </>
+  )}
+</Box>
   );
 }

@@ -1,12 +1,12 @@
 // VisibilitySelector.jsx
 import React, { useState } from 'react';
-import { IconButton, Popover, List, ListItem } from '@mui/material';
+import { IconButton, Popover, List, ListItem, Typography, Box } from '@mui/material';
 import PublicIcon from '@mui/icons-material/Public';
 import LockIcon from '@mui/icons-material/Lock';
 import PeopleIcon from '@mui/icons-material/People';
 import GroupIcon from '@mui/icons-material/Group';
 
-const VisibilitySelector = ({ value, onChange }) => {
+const VisibilitySelector = ({ value, onChange, showLabel = false }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -24,27 +24,34 @@ const VisibilitySelector = ({ value, onChange }) => {
 
   const open = Boolean(anchorEl);
 
-  // Choose the icon based on the current visibility value
-  const getVisibilityIcon = (visibility) => {
+  const getVisibilityIconAndLabel = (visibility) => {
     switch (visibility) {
       case 'public':
-        return <PublicIcon fontSize="small" />;
+        return { icon: <PublicIcon fontSize="small" />, label: 'Public' };
       case 'private':
-        return <LockIcon fontSize="small" />;
+        return { icon: <LockIcon fontSize="small" />, label: 'Private' };
       case 'friends':
-        return <PeopleIcon fontSize="small" />;
+        return { icon: <PeopleIcon fontSize="small" />, label: 'Friends Only' };
       case 'group':
-        return <GroupIcon fontSize="small" />;
+        return { icon: <GroupIcon fontSize="small" />, label: 'Group of Friends' };
       default:
-        return <PublicIcon fontSize="small" />;
+        return { icon: <PublicIcon fontSize="small" />, label: 'Public' };
     }
   };
 
+  const { icon, label } = getVisibilityIconAndLabel(value);
+
   return (
     <>
-      <IconButton onClick={handleClick} size="small">
-        {getVisibilityIcon(value)}
-      </IconButton>
+      <Box
+        sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+        onClick={handleClick}
+      >
+        {showLabel && <Typography variant="body2" sx={{ mr: 1 }}>{label}</Typography>}
+        <IconButton size="small">
+          {icon}
+        </IconButton>
+      </Box>
       <Popover
         open={open}
         anchorEl={anchorEl}
@@ -59,28 +66,16 @@ const VisibilitySelector = ({ value, onChange }) => {
         }}
       >
         <List>
-          <ListItem
-            onClick={() => handleSelect('public')}
-            sx={{ cursor: 'pointer' }}
-          >
+          <ListItem onClick={() => handleSelect('public')} sx={{ cursor: 'pointer' }}>
             <PublicIcon fontSize="small" sx={{ mr: 1 }} /> Public
           </ListItem>
-          <ListItem
-            onClick={() => handleSelect('friends')}
-            sx={{ cursor: 'pointer' }}
-          >
+          <ListItem onClick={() => handleSelect('friends')} sx={{ cursor: 'pointer' }}>
             <PeopleIcon fontSize="small" sx={{ mr: 1 }} /> Friends Only
           </ListItem>
-          <ListItem
-            onClick={() => handleSelect('group')}
-            sx={{ cursor: 'pointer' }}
-          >
+          <ListItem onClick={() => handleSelect('group')} sx={{ cursor: 'pointer' }}>
             <GroupIcon fontSize="small" sx={{ mr: 1 }} /> Group of Friends
           </ListItem>
-          <ListItem
-            onClick={() => handleSelect('private')}
-            sx={{ cursor: 'pointer' }}
-          >
+          <ListItem onClick={() => handleSelect('private')} sx={{ cursor: 'pointer' }}>
             <LockIcon fontSize="small" sx={{ mr: 1 }} /> Private
           </ListItem>
         </List>
