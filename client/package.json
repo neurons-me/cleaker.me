@@ -7,10 +7,10 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "serve": "vite preview --mode production"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/suiGn/cleaker.me.git"
@@ -38,6 +38,7 @@
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.17.10",
     "@vitejs/plugin-react": "^4.3.3",
+    "axios": "^1.7.7",
     "cleaker": "file:../../cleaker",
     "crypto-js": "^4.2.0",
     "ethers": "^6.13.4",

@@ -8,12 +8,28 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
+import { useAuth } from '../../context/AuthContext'; // Import useAuth for logout functionality
 import MenuButton from './MenuButton';
 import MenuContent from './MenuContent';
 import CardAlert from './CardAlert';
 
 function SideMenuMobile({ open, toggleDrawer }) {
+  const navigate = useNavigate();
+  const { logout } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await axios.post('https://lvh.me:3443/logout');  // Make sure the URL is correct
+      logout(); // Clear user session in AuthContext
+      navigate('/'); // Redirect to login page after logging out
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
+  };
+
   return (
     <Drawer
       anchor="right"
@@ -40,12 +56,12 @@ function SideMenuMobile({ open, toggleDrawer }) {
           >
             <Avatar
               sizes="small"
-              alt="Riley Carter"
+              alt="Cleaker.me"
               src="/static/images/avatar/7.jpg"
               sx={{ width: 24, height: 24 }}
             />
             <Typography component="p" variant="h6">
-              Riley Carter
+              Cleaker.me
             </Typography>
           </Stack>
           <MenuButton showBadge>
@@ -59,7 +75,12 @@ function SideMenuMobile({ open, toggleDrawer }) {
         </Stack>
         <CardAlert />
         <Stack sx={{ p: 2 }}>
-          <Button variant="outlined" fullWidth startIcon={<LogoutRoundedIcon />}>
+          <Button
+            variant="outlined"
+            fullWidth
+            startIcon={<LogoutRoundedIcon />}
+            onClick={handleLogout} // Add onClick handler to trigger logout
+          >
             Logout
           </Button>
         </Stack>

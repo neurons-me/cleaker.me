@@ -97,3 +97,8 @@
 {"timestamp":"2024-11-05T03:41:46.915Z","level":"info","username":"pitagoras","clientAttempts":0,"code":"LOGIN_ATTEMPT","serverAttempts":0,"status":"LOGIN_SUCCESS","message":"User pitagoras logged in successfully"}
 {"timestamp":"2024-11-05T17:19:18.795Z","level":"info","username":"amigos","clientAttempts":0,"code":"LOGIN_ATTEMPT","serverAttempts":0,"status":"LOGIN_SUCCESS","message":"User amigos logged in successfully"}
 {"timestamp":"2024-11-06T18:19:49.508Z","level":"info","username":"pitagoras","clientAttempts":0,"code":"LOGIN_ATTEMPT","serverAttempts":0,"status":"LOGIN_SUCCESS","message":"User pitagoras logged in successfully"}
+{"timestamp":"2024-11-08T22:29:12.502Z","level":"info","username":"rabano","clientAttempts":0,"code":"LOGIN_ATTEMPT","serverAttempts":0,"status":"LOGIN_SUCCESS","message":"User rabano logged in successfully"}
+{"timestamp":"2024-11-08T22:31:48.886Z","level":"info","username":"rabano","clientAttempts":0,"code":"LOGIN_ATTEMPT","serverAttempts":1,"status":"INVALID_PASSWORD","message":"Invalid password for rabano"}
+{"timestamp":"2024-11-08T22:31:54.722Z","level":"info","username":"rabano","clientAttempts":1,"code":"LOGIN_ATTEMPT","serverAttempts":0,"status":"LOGIN_SUCCESS","message":"User rabano logged in successfully"}
+{"timestamp":"2024-11-08T23:26:37.735Z","level":"info","username":"rabano","clientAttempts":0,"code":"LOGIN_ATTEMPT","serverAttempts":0,"status":"LOGIN_SUCCESS","message":"User rabano logged in successfully"}
+{"timestamp":"2024-11-11T16:16:28.653Z","level":"info","username":"rabano","clientAttempts":0,"code":"LOGIN_ATTEMPT","serverAttempts":0,"status":"LOGIN_SUCCESS","message":"User rabano logged in successfully"}
