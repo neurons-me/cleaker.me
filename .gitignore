@@ -1,0 +1,5 @@
+# Ignore all environment files
+.env*
+
+# Ignore all environment files
+.server/env/*
