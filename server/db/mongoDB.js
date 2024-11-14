@@ -9,8 +9,8 @@ export const connectDB = async () => {
     const mongoUser = process.env.MONGO_USER;
     const mongoPassword = process.env.MONGO_PASSWORD;
 
-    const uri = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDB}`;
-    
+    const uri = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST || '127.0.0.1'}:27017/${process.env.MONGO_DB}`;
+    console.log('Connecting to MongoDB:', uri);    
     await mongoose.connect(uri, {
       dbName: mongoDB,
     });
