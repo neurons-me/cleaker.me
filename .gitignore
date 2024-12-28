@@ -15,7 +15,6 @@ client/dist/
 # Server-specific ignores
 server/node_modules/
 server/dist/
-server/src/
 # Temporary files
 *.tmp
 *.swp
