@@ -1,68 +1,68 @@
-// server/server.js
+// cleaker.me - server/server.js
 import dotenvFlow from 'dotenv-flow';
 import express from 'express';
-import https from 'https';
-import http from 'http';
-import fs from 'fs';
 import cors from 'cors';
-import { connectDB } from './db/mongoDB.js';
-import wildcardUsernames from './scripts/wildcardUsernames.js';
-import router from './router/routes.js'; // Import the main router with all routes
+import { corsOptions } from './src/scripts/corsOptions.js';
+import { connectDB } from './src/db/mongoDB.js';
+import cleaker from 'cleaker';
+import router from './src/router/routes.js'; // Import the main router with all routes
 import chalk from 'chalk';
-
 dotenvFlow.config({ path: './env' });
-const app = express();
 
-// CORS Configuration
-const corsOptions = {
-  origin: process.env.CORS_ALLOWED_ORIGINS || 'https://lvh.me:3000', // Use environment variable if available
-  credentials: true, // Allow credentials (cookies, authorization headers)
+// Centralized environment variable checker
+const checkEnvVariables = (requiredVars) => {
+  const missingVars = requiredVars.filter((envVar) => !process.env[envVar]);
+  if (missingVars.length > 0) {
+    throw new Error(`Missing required environment variables: ${missingVars.join(', ')}`);
+  }
 };
+
+// Check required environment variables
+try {
+  checkEnvVariables(['JWT_SECRET', 'ENCRYPTION_SECRET']);
+  console.log(chalk.green('Environment variables validated successfully.'));
+} catch (error) {
+  console.error(chalk.red(error.message));
+  process.exit(1); // Exit the process if critical variables are missing
+}
+
+const app = express();
+const port = process.env.PORT || 8383;
+
 app.use(cors(corsOptions));
 app.use(express.json());
-connectDB();
-app.use(wildcardUsernames);
+// Use cleaker.me middleware for identity and context logging
+app.use(
+  cleaker.me({
+    ledger: null, // ledger endpoint
+    jwtCookieName: 'cleakerToken', // Name of the JWT cookie used for authentication
+    requireAuth: false, // Set to true if authentication is required
+  })
+);
 
-// Apply main router to the root path
-app.use('/', router); // This now handles /login, /signUp, etc.
-
-// Environment Variables Logging
+app.use('/', router);
 console.log(`
-  Starting server in ${chalk.blue(process.env.NODE_ENV || 'development')} mode...
   ┌─┐┬  ┌─┐┌─┐┬┌─┌─┐┬─┐ ┌┬┐┌─┐
   │  │  ├┤ ├─┤├┴┐├┤ ├┬┘ │││├┤ 
   └─┘┴─┘└─┘┴ ┴┴ ┴└─┘┴└─o┴ ┴└─┘
-  Environment Variables:
-  - NODE_ENV: ${chalk.green(process.env.NODE_ENV || chalk.keyword('orange')('Not set'))}
-  - MONGO_USER: ${process.env.MONGO_USER ? chalk.green(process.env.MONGO_USER) : chalk.keyword('orange')('Not set')}
-  - MONGO_HOST: ${process.env.MONGO_HOST ? chalk.green(process.env.MONGO_HOST) : chalk.keyword('orange')('Not set')}
-  - MONGO_DB: ${process.env.MONGO_DB ? chalk.green(process.env.MONGO_DB) : chalk.keyword('orange')('Not set')}
-  - MONGO_PASSWORD: ${process.env.MONGO_PASSWORD ? chalk.green('Set') : chalk.keyword('orange')('Not set')}
-  - PORT: ${process.env.PORT ? chalk.green(process.env.PORT) : chalk.keyword('orange')('Not set')}
-  - CORS_ALLOWED_ORIGINS: ${process.env.CORS_ALLOWED_ORIGINS ? chalk.green(process.env.CORS_ALLOWED_ORIGINS) : chalk.keyword('orange')('Not set')}
-  - JWT_SECRET: ${process.env.JWT_SECRET ? chalk.green('Set') : chalk.keyword('orange')('Not set')}
-  - ENCRYPTION_SECRET: ${process.env.ENCRYPTION_SECRET ? chalk.green('Set') : chalk.keyword('orange')('Not set')}
 `);
-
-const httpPort = process.env.HTTP_PORT || 3001;
-const httpsPort = process.env.HTTPS_PORT || 3443;
-const useHttps = process.env.USE_HTTPS === 'true';
-
-// Start HTTP Server
-http.createServer(app).listen(httpPort, () => {
-  console.log(`HTTP Server running at http://lvh.me:${httpPort}`);
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+}).on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`Port ${port} is already in use. Please free the port and try again.`);
+    process.exit(1); // Exit the process to prevent hanging
+  } else {
+    console.error('Unexpected server error:', err);
+    process.exit(1);
+  }
 });
-
-// Conditionally start HTTPS server
-if (useHttps) {
-  const httpsOptions = {
-    key: fs.readFileSync(process.env.SSL_KEY_PATH),
-    cert: fs.readFileSync(process.env.SSL_CERT_PATH),
-  };
-
-  https.createServer(httpsOptions, app).listen(httpsPort, () => {
-    console.log(`HTTPS Server running at https://lvh.me:${httpsPort}`);
-  });
-} else {
-  console.log('HTTPS Server not started as USE_HTTPS is set to false.');
-}
+// Connect to mongodb
+connectDB().catch((err) => {
+  console.error('Error connecting to the database:', err.message);
+  if (process.env.NODE_ENV !== 'production') {
+    console.error(err); // Log full error stack in non-production
+  }
+  process.exit(1); // Exit the process on failure
+});

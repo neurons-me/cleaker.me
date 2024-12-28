@@ -39,7 +39,11 @@ export default function Login({ openSignUp }) {
 
   const checkUsernameAndPassword = async (username, password) => {
     try {
-      const response = await fetch('http://localhost:3001/login', {
+      console.log("log import meta env.")
+      console.log(import.meta.env);
+      const apiBase = import.meta.env.VITE_API_URL || 'https://api.cleaker.me';
+      console.log("checking UsernameAndPassword: ", apiBase);
+      const response = await fetch(`${apiBase}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, loginAttempts }), // Include loginAttempts in request body
@@ -48,7 +52,6 @@ export default function Login({ openSignUp }) {
   
       if (response.ok) {
         const userData = await response.json();
-        
         // Validate that token exists in userData
         if (userData && userData.token) {
           login(userData); // Pass the full userData object to AuthContext

@@ -1,5 +1,23 @@
-# Ignore all environment files
-.env*
-
-# Ignore all environment files
-.server/env/*
+# Node.js modules
+node_modules/
+# Environment files
+.env
+.env.*
+# Logs
+*.log
+logs/
+# Build outputs
+dist/
+build/
+# Client-specific ignores
+client/node_modules/
+client/dist/
+# Server-specific ignores
+server/node_modules/
+server/dist/
+server/src/
+# Temporary files
+*.tmp
+*.swp
+# Assets
+client/public/assets/

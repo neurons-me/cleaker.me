@@ -33,7 +33,8 @@ export default function SignUp({ openLogin, setIsLoggedIn }) { // Changed openCl
     const password = data.get('password');
 
     try {
-      const response = await fetch('http://localhost:3001/signUp', {
+      const apiBase = import.meta.env.VITE_API_URL || 'https://api.cleaker.me';
+      const response = await fetch(`${apiBase}/signUp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password }),

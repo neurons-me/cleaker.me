@@ -4,11 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "start:dev": "cross-env NODE_ENV=development node server.js",
-    "start:production": "cross-env NODE_ENV=production node server.js",
-    "start:development.local": "cross-env NODE_ENV=development.local node server.js"
+    "start": "cross-env NODE_ENV=production node server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon --watch server.js --watch src --ext js,json server.js",
+    "deploy": "npm run build && scp -r dist/ user@server:/srv/cleaker.server"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +16,7 @@
     "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "chalk": "^5.3.0",
-    "cleaker": "file:../../cleaker",
+    "cleaker": "^2.6.58",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "crypto-js": "^4.2.0",
@@ -26,10 +24,15 @@
     "dotenv-flow": "^4.1.0",
     "ethers": "^6.13.4",
     "express": "^4.21.1",
+    "i.mlearning": "^2.3.43",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.3",
     "nodemailer": "^6.9.15",
-    "this.me": "file:../../all.this/workspaces/this.me",
+    "this.me": "^2.9.41",
+    "uuid": "^11.0.3",
     "winston": "^3.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }

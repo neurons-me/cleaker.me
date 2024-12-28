@@ -1,3 +1,4 @@
+//src/pages/Homes.jsx
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import MeCompactCard from '../components/Me/MeCompact';
