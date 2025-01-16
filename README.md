@@ -1,10 +1,10 @@
 ![Cleaker](./web.client/public/assets/CLEAKER_.png)
 
-## Cleaker Ecosystem
+# Cleaker Ecosystem
 
 This repository contains the core components of the Cleaker ecosystem, including client interfaces, API endpoints, and Node.js modules. Together, these components enable the functionalities and services offered by Cleaker.
 
-Repository Structure
+## Repository Structure
 
 1. API Server
 
@@ -23,7 +23,7 @@ The React Vite app serves as the front-end interface for Cleaker and is located 
 
 The app is built using React and Vite, providing a fast and modern user experience.
 
-Build Outputs
+## Build Outputs
 
 The Vite build for deployment is located at:
 
