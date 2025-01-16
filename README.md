@@ -6,7 +6,7 @@ This repository contains the core components of the Cleaker ecosystem, including
 
 ## Repository Structure
 
-1. API Server
+### 1. API Server
 
 The backend API server powers Cleaker’s core functionalities and is located at:
 ```bash
@@ -18,7 +18,7 @@ This server handles:
 	•	API endpoints for interacting with Cleaker services.
 	•	Core business logic and integrations.
 
-1. Client Interface
+### 2. Client Interface
 
 The React Vite app serves as the front-end interface for Cleaker and is located in:
 ```bash
@@ -36,3 +36,5 @@ The Vite build for deployment is located at:
 Learn More About Cleaker, visit:
 - [Cleaker](https://cleaker.me)
 - [Neurons](https://neurons.me)
+- ![Cleaker](./web.client/public/assets/neurons_logo.png)
+
