@@ -1,5 +1,5 @@
 {
-  "name": "cleaker.client",
+  "name": "cleaker.web.client",
   "version": "2.1.0",
   "description": "Taking all Points within a fixed distance.",
   "homepage": "https://cleaker.me",

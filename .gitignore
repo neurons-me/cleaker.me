@@ -10,11 +10,11 @@ node_modules/
 !*.env.example
 
 # Ignore specific environment directories
-client/env/*
+web.client/env/*
 api/env/*
 
 # Allow example files in those directories
-!client/env/*.env.example
+!web.client/env/*.env.example
 !api/env/*.env.example
 
 # Logs
@@ -25,12 +25,12 @@ logs/
 # Build outputs
 dist/
 build/
-client/dist/
+web.client/dist/
 **/dist/
 
-# Client-specific ignores
-client/node_modules/
-client/dist/
+# web.client-specific ignores
+web.client/node_modules/
+web.client/dist/
 
 # Server-specific ignores
 server/node_modules/
@@ -52,7 +52,3 @@ package-lock.json
 # Ignore .DS_Store everywhere (macOS metadata files)
 .DS_Store
 **/.DS_Store
-
-# Vite cache
-.vite/
-**/.vite/
