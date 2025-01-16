@@ -52,3 +52,7 @@ package-lock.json
 # Ignore .DS_Store everywhere (macOS metadata files)
 .DS_Store
 **/.DS_Store
+
+# Vite cache
+.vite/
+**/.vite/
