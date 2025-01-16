@@ -1,0 +1,3 @@
+[submodule "modules/cleaker"]
+	path = modules/cleaker
+	url = https://github.com/neurons-me/cleaker.me
