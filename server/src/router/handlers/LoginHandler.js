@@ -103,10 +103,12 @@ export async function loginHandler  (req, res) {
     logEntry.message = `User ${username} successfully logged in at ${timestamp}.`;
     logEntry.serverAttempts = 0;
     loginActivityLogger.info(logEntry);
+    /*The server also sends back the username and email 
+    in the response body for the client to store in localStorage*/
     res.status(200).send({ 
       message: LOGIN_CODES.SUCCESS,
-      username: user.username,
-      email: user.email, // Include email if desired
+      username: user.username, //send username to client
+      email: user.email, // send email to client
     });
   } catch (error) {
     loginActivityLogger.error({

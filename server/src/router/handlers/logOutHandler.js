@@ -1,5 +1,7 @@
 // handlers/logOutHandler.js
 export const logOutHandler = (req, res) => {
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] Logout request received from IP: ${req.ip}`);
     try {
       // Clear the JWT cookie (if it exists)
       res.clearCookie('cleakerToken', {

@@ -60,3 +60,13 @@
 {"timestamp":"2024-12-26T07:48:07.640Z","message":{"code":"Weak Password.","username":"administrador","email":"administrador@admin.com"}}
 {"timestamp":"2024-12-26T07:48:12.221Z","message":{"code":"New user request initiated.","username":"administrador","email":"administrador@admin.com"}}
 {"timestamp":"2024-12-26T07:48:12.410Z","message":{"code":"New user created successfully.","userId":"1d36b7ef-2275-4f22-9c5a-80b384ec8bca","username":"administrador","email":"administrador@admin.com"}}
+{"timestamp":"2025-01-03T05:50:55.510Z","message":{"code":"New user request initiated.","username":"rabanote","email":"rabanote@rabanote.com"}}
+{"timestamp":"2025-01-03T05:50:55.768Z","message":{"code":"New user created successfully.","userId":"4a1952d8-f4f5-455e-a3a0-f7f3eb7af443","username":"rabanote","email":"rabanote@rabanote.com"}}
+{"timestamp":"2025-01-03T12:34:32.384Z","message":{"code":"New user request initiated.","username":"pplalo","email":"dev@neurons.me"}}
+{"timestamp":"2025-01-03T12:34:32.386Z","message":{"code":"Weak Password.","username":"pplalo","email":"dev@neurons.me"}}
+{"timestamp":"2025-01-03T12:34:45.943Z","message":{"code":"New user request initiated.","username":"pplalo","email":"dev@neurons.me"}}
+{"timestamp":"2025-01-03T12:34:45.944Z","message":{"code":"Weak Password.","username":"pplalo","email":"dev@neurons.me"}}
+{"timestamp":"2025-01-03T12:35:18.548Z","message":{"code":"New user request initiated.","username":"pplalo","email":"dev@neurons.me"}}
+{"timestamp":"2025-01-03T12:35:18.548Z","message":{"code":"Weak Password.","username":"pplalo","email":"dev@neurons.me"}}
+{"timestamp":"2025-01-03T12:35:43.226Z","message":{"code":"New user request initiated.","username":"pplalo","email":"dev@neurons.me"}}
+{"timestamp":"2025-01-03T12:35:43.450Z","message":{"code":"New user created successfully.","userId":"9654997d-0dd7-4519-9c2c-f5cb03cb06dd","username":"pplalo","email":"dev@neurons.me"}}

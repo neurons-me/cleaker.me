@@ -1,22 +1,38 @@
 # Node.js modules
 node_modules/
+
 # Environment files
 .env
 .env.*
+
 # Logs
 *.log
 logs/
+
 # Build outputs
 dist/
 build/
+
 # Client-specific ignores
 client/node_modules/
 client/dist/
+
 # Server-specific ignores
 server/node_modules/
 server/dist/
+
+# Packages ignores
+pckgs/cleaker/node_modules/
+pckgs/cleaker/dist/
+
 # Temporary files
 *.tmp
 *.swp
+
 # Assets
 client/public/assets/
+
+# Ignore package lock files
+client/package-lock.json
+server/package-lock.json
+pckgs/cleaker/package-lock.json

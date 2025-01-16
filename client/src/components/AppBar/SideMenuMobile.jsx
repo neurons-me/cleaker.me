@@ -10,7 +10,6 @@ import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
 import { useAuth } from '../../context/AuthContext'; // Import useAuth for logout functionality
 import MenuButton from './MenuButton';
 import MenuContent from './MenuContent';
@@ -22,9 +21,9 @@ function SideMenuMobile({ open, toggleDrawer }) {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://lvh.me:3443/logout');  // Make sure the URL is correct
+      await axios.post('https://lvh.me:3443/logout'); // Adjust the API endpoint as needed
       logout(); // Clear user session in AuthContext
-      navigate('/'); // Redirect to login page after logging out
+      navigate('/'); // Redirect to the homepage after logging out
     } catch (error) {
       console.error('Logout failed:', error);
     }
@@ -34,7 +33,7 @@ function SideMenuMobile({ open, toggleDrawer }) {
     <Drawer
       anchor="right"
       open={open}
-      onClose={toggleDrawer(false)}
+      onClose={() => toggleDrawer(false)} // Fix: Wrap toggleDrawer in a callback
       sx={{
         zIndex: (theme) => theme.zIndex.drawer + 1,
         [`& .${drawerClasses.paper}`]: {
@@ -88,10 +87,5 @@ function SideMenuMobile({ open, toggleDrawer }) {
     </Drawer>
   );
 }
-
-SideMenuMobile.propTypes = {
-  open: PropTypes.bool,
-  toggleDrawer: PropTypes.func.isRequired,
-};
 
 export default SideMenuMobile;

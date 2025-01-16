@@ -1,4 +1,4 @@
-//server/src/scripts/cookis.js
+//server/src/scripts/cookies.js
 import jwt from 'jsonwebtoken';
 /*
   Sets the authentication cookie with provided token and options.
@@ -7,7 +7,9 @@ import jwt from 'jsonwebtoken';
    (_  o  _)
      / o \
     (_/ \_)
-  We get to remember.
+We get to remember.
+Mantener al usuario autenticado entre solicitudes HTTP sin requerir el envío manual de credenciales en cada petición.
+Compartir autenticación entre subdominios como profile.cleaker.me y dashboard.cleaker.me.
  */
   export const setAuthCookie = (res, payload, options = {}) => {
     // Default JWT and cookie options

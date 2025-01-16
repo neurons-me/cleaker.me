@@ -1,19 +1,30 @@
 import React from 'react';
-
-const CleakerLogo = () => (
-  <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '8px' }}>
-    {/* Cuadrado */}
-    <rect x="2" y="12" width="10" height="10" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.8" />
-
-    {/* Círculo */}
-    <circle cx="20" cy="10" r="5" fill="none" stroke="#22c55e" strokeWidth="2" opacity="0.8" />
-
-    {/* Triángulo */}
-    <polygon points="30,20 25,30 35,30" fill="none" stroke="#fbbf24" strokeWidth="2" opacity="0.8" />
-
-    {/* New Red Shape - Hexagon */}
-    <polygon points="10,30 15,35 10,40 5,35" fill="none" stroke="#ef4444" strokeWidth="2" opacity="0.8" />
-  </svg>
+const CleakerLogo = ({ width = 40, height = 40 }) => (
+  <div style={{
+    display: 'inline-block',
+    width: `${width}px`,
+    height: `${height}px`,
+    marginRight: '8px',
+    backgroundImage: 'url(/icons/_CLEAKER_.png)',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    animation: 'pulse 2s infinite',
+    filter: 'drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2))'
+  }}>
+    <style>
+      {`
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+      `}
+    </style>
+  </div>
 );
 
 export default CleakerLogo;

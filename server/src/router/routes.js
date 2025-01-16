@@ -1,4 +1,4 @@
-// routes/index.js
+// router/routes.js
 import express from 'express';
 import { loginHandler } from './handlers/LoginHandler.js';
 import { signUpHandler } from './handlers/signUpHandler.js';
@@ -15,6 +15,22 @@ router.get('/verify-email', verifyEmail);
 router.get('/user-profile/:username', profileViewHandler);
 router.use('/path', pathRoutes);
 router.use('/wallets', walletRoutes);  // Attach wallet routes under `/wallet`
-router.post('/logout', logOutHandler); // Define the logout route
+router.get('/logout', logOutHandler); // Define the logout route
+
+router.get('/protected', (req, res) => {
+    const token = req.cookies.cleakerToken;
+    if (!token) {
+        console.log("Unauthorized");
+      return res.status(401).send({ message: 'Unauthorized' });
+    }
+    try {
+      const payload = verifyAuthCookie(token);
+      console.log("Access granted");
+      res.send({ message: 'Access granted', payload });
+    } catch (err) {
+        console.log("Invalid or expired token");
+      res.status(401).send({ message: 'Invalid or expired token' });
+    }
+  });
 
 export default router;

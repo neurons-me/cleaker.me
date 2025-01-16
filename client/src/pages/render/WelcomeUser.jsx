@@ -1,20 +1,35 @@
-// src/pages/UserWelcome.jsx
-import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+// src/pages/WelcomeUser.jsx
+import React, { useState, useEffect } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Box, Typography, Divider, Button, Modal } from '@mui/material';
 import Grid2 from '@mui/material/Grid2';
 import FaceScan from '../../components/FaceScan/FaceScan';
 import CreateWallet from '../../components/Wallet/CreateWallet';
+import { useAuth } from '../../context/AuthContext'; // Importar el contexto de autenticación
+import { useSubdomain } from '../../utils/useSubdomain'; // Hook para obtener subdominio
 
-export default function UserWelcome() {
+export default function WelcomeUser() {
   const [searchParams] = useSearchParams();
-  const username = searchParams.get('username');
+  const navigate = useNavigate();
+  const { user, isLoggedIn } = useAuth();
+  const { subdomain, isMainView } = useSubdomain();
+  const username = searchParams.get('username') || user?.username; // Preferencia para el usuario autenticado
+
+  // Validación: Solo permitir acceso al propietario del perfil
+  const isViewingOwnProfile = isMainView
+    ? user?.username === username
+    : user?.username === subdomain;
+
+  useEffect(() => {
+    if (!isLoggedIn || !isViewingOwnProfile) {
+      navigate('/'); // Redirigir si no está autenticado o no es el propietario del perfil
+    }
+  }, [isLoggedIn, isViewingOwnProfile, navigate]);
+
   const [isFaceScanOpen, setIsFaceScanOpen] = useState(false);
   const [isCreateWalletOpen, setIsCreateWalletOpen] = useState(false);
-
   const handleOpenFaceScan = () => setIsFaceScanOpen(true);
   const handleCloseFaceScan = () => setIsFaceScanOpen(false);
-
   const handleOpenCreateWallet = () => setIsCreateWalletOpen(true);
   const handleCloseCreateWallet = () => setIsCreateWalletOpen(false);
 
@@ -52,9 +67,7 @@ export default function UserWelcome() {
         <Typography variant="body1" align="center" color="text.secondary">
           Please complete your profile setup below:
         </Typography>
-
         <Divider sx={{ my: 3 }} />
-
         <Grid2 container spacing={2}>
           <Grid2 xs={6}>
             <Box
@@ -77,7 +90,6 @@ export default function UserWelcome() {
               </Typography>
             </Box>
           </Grid2>
-
           <Grid2 xs={6}>
             <Box
               sx={{
@@ -100,27 +112,14 @@ export default function UserWelcome() {
             </Box>
           </Grid2>
         </Grid2>
-
         <Divider sx={{ my: 3 }} />
-
-        <Button
-          fullWidth
-          variant="contained"
-          color="primary"
-          sx={{ py: 1.5 }}
-        >
+        <Button fullWidth variant="contained" color="primary" sx={{ py: 1.5 }}>
           Finish Setup
         </Button>
-
-        <Button
-          fullWidth
-          variant="outlined"
-          sx={{ mt: 1, py: 1.5 }}
-        >
+        <Button fullWidth variant="outlined" sx={{ mt: 1, py: 1.5 }}>
           Finish Setting Up Later
         </Button>
       </Box>
-
       {/* FaceScan Modal */}
       <Modal open={isFaceScanOpen} onClose={handleCloseFaceScan}>
         <Box
@@ -140,7 +139,6 @@ export default function UserWelcome() {
           <FaceScan open={isFaceScanOpen} onClose={handleCloseFaceScan} />
         </Box>
       </Modal>
-
       {/* CreateWallet Modal */}
       <Modal open={isCreateWalletOpen} onClose={handleCloseCreateWallet}>
         <Box

@@ -43,6 +43,7 @@
     "crypto-js": "^4.2.0",
     "ethers": "^6.13.4",
     "i.mlearning": "^2.3.43",
+    "js-cookie": "^3.0.5",
     "qrcode.react": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

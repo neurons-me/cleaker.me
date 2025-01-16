@@ -1,16 +1,13 @@
-// src/pages/Welcome.jsx
 import React, { useState } from 'react';
 import { Box, Typography, Button, Modal, useTheme } from '@mui/material';
 import { animated, useSpring } from '@react-spring/web';
-import Login from '../../components/Login/Login';  // Updated to import Login
+import Login from '../../components/Login/Login';
 import SignUp from '../../components/SignUp/SignUp';
 
-export default function Welcome({ setIsLoggedIn }) {
+export default function LoginPage({ setIsLoggedIn }) {
   const theme = useTheme();
-  const [openLogin, setOpenLogin] = useState(false); // Updated state name from openCleakMe to openLogin
+  const [openLogin, setOpenLogin] = useState(false);
   const [openSignUp, setOpenSignUp] = useState(false);
-  const isLoggedIn = false; // Replace with actual session check logic if needed
-  const username = "YourUsername"; // Replace with actual username if needed
 
   const handleOpenLogin = () => {
     setOpenLogin(true);
@@ -36,14 +33,19 @@ export default function Welcome({ setIsLoggedIn }) {
 
   return (
     <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        backgroundColor: theme.palette.background.default,
-      }}
-    >
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh', // Minimum height to match viewport
+      maxHeight: '100vh', // Prevent overflowing
+      overflow: 'hidden', // Prevent scrollbars if content overflows
+      backgroundColor: theme.palette.background.default,
+      padding: 0, // Remove potential padding
+      margin: 0, // Remove potential margin
+    }}
+  >
       <animated.div style={springProps}>
         <Box
           sx={{
@@ -63,30 +65,31 @@ export default function Welcome({ setIsLoggedIn }) {
             boxShadow: theme.shadows[4],
           }}
         >
-          <Typography variant="h4" sx={{ fontWeight: 'bold', color: theme.palette.text.primary, mb: 2 }}>
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: 'bold',
+              color: theme.palette.text.primary,
+              mb: 2,
+            }}
+          >
             CLEAKER
           </Typography>
 
-          {isLoggedIn ? (
-            <Typography variant="h6" sx={{ color: theme.palette.text.secondary, mt: 2 }}>
-              {username}.me
-            </Typography>
-          ) : (
-            <Button
-              variant="contained"
-              onClick={handleOpenLogin}
-              sx={{
-                mt: 2,
-                width: 200,
-                height: 40,
-                textAlign: 'center',
-                backgroundColor: theme.palette.primary.main,
-                color: theme.palette.primary.contrastText,
-              }}
-            >
-              .me
-            </Button>
-          )}
+          <Button
+            variant="contained"
+            onClick={handleOpenLogin}
+            sx={{
+              mt: 2,
+              width: 200,
+              height: 40,
+              textAlign: 'center',
+              backgroundColor: theme.palette.primary.main,
+              color: theme.palette.primary.contrastText,
+            }}
+          >
+            .me
+          </Button>
         </Box>
       </animated.div>
 
@@ -106,7 +109,7 @@ export default function Welcome({ setIsLoggedIn }) {
             width: '100%',
           }}
         >
-          <Login openSignUp={handleOpenSignUp} /> {/* Pass openSignUp prop */}
+          <Login openSignUp={handleOpenSignUp} />
         </Box>
       </Modal>
 
@@ -126,7 +129,7 @@ export default function Welcome({ setIsLoggedIn }) {
             width: '100%',
           }}
         >
-          <SignUp openLogin={handleOpenLogin} setIsLoggedIn={setIsLoggedIn} /> {/* Pass setIsLoggedIn */}
+          <SignUp openLogin={handleOpenLogin} setIsLoggedIn={setIsLoggedIn} />
         </Box>
       </Modal>
     </Box>

@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Box, Typography, Container, TextField, CssBaseline, Modal, useTheme } from '@mui/material';
 import { animated, useSpring } from '@react-spring/web';
 import AccountAndPasswordRecovery from '../AccountRecovery/AccountAndPasswordRecovery';
-import CleakerLogo from '../CleakerLogo/CleakerLogo3D';
+import CleakerLogo from '../CleakerLogo/CleakerLogo';
 import { useAuth } from '../../context/AuthContext';
-
+//LogIn React Component.
 export default function Login({ openSignUp }) {
   const [errorMessage, setErrorMessage] = useState('');
   const [openRecovery, setOpenRecovery] = useState(false);
@@ -14,19 +14,16 @@ export default function Login({ openSignUp }) {
   const navigate = useNavigate();
   const theme = useTheme();
   const [loginAttempts, setLoginAttempts] = useState(0); // Track login attempts
-
   const springProps = useSpring({
     from: { opacity: 0, transform: 'translateY(10px)' },
     to: { opacity: 1, transform: 'translateY(0px)' },
     config: { duration: 500 },
   });
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const username = data.get('username');
     const password = data.get('password');
-
     const loginSuccessful = await checkUsernameAndPassword(username, password);
     if (loginSuccessful) {
       setLoginAttempts(0); // Reset attempts on successful login
@@ -43,18 +40,21 @@ export default function Login({ openSignUp }) {
       console.log(import.meta.env);
       const apiBase = import.meta.env.VITE_API_URL || 'https://api.cleaker.me';
       console.log("checking UsernameAndPassword: ", apiBase);
+  /*  Sends the credentials to the server via a POST request.
+      credentials: 'include' - to ensure that cookies are sent and received properly.*/
       const response = await fetch(`${apiBase}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, loginAttempts }), // Include loginAttempts in request body
         credentials: 'include', // Send cookies with the request
       });
-  
+  /*  If the server validates the credentials, 
+      it responds with a JWT in an HTTP-only cookie (cleakerToken) 
+      and additional user data in the JSON response.*/
       if (response.ok) {
-        const userData = await response.json();
-        // Validate that token exists in userData
-        if (userData && userData.token) {
-          login(userData); // Pass the full userData object to AuthContext
+        const usr = await response.json(); //response from the server. username and email.
+        if (usr && usr.username) { // Validate that token exists in usr
+          login(usr); // Pass the full userData object to AuthContext
           return true;
         } else {
           setErrorMessage('Authentication failed: Token missing.');
@@ -71,17 +71,15 @@ export default function Login({ openSignUp }) {
       return false;
     }
   };
-
   const handleOpenRecovery = () => setOpenRecovery(true);
   const handleCloseRecovery = () => setOpenRecovery(false);
-
   return (
     <animated.div style={springProps}>
       <Container component="main" maxWidth="sm">
         <CssBaseline />
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 3, borderRadius: 2, backgroundColor: theme.palette.background.paper }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-            <CleakerLogo />
+          <CleakerLogo width={55} height={55} />
             <Typography variant="h3" color="text.primary">Cleaker</Typography>
           </Box>
           {errorMessage && (

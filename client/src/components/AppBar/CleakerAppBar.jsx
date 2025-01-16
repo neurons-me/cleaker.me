@@ -1,58 +1,113 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useAuth } from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import { AppBar, Box, Toolbar, IconButton, Typography, Badge, Avatar, Popover } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Badge,
+  Avatar,
+  Popover,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import Notifications from './Notifications'; // Adjust the path as necessary
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import ColorModeIcon from './ColorModeIcon';
-import SideMenuMobile from './SideMenuMobile';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import SideMenuMobile from './SideMenuMobile'; // Keep SideMenuMobile for mobile handling
 import SearchComponent from '../Search/SearchComponent';
 import MeCompact from '../Me/MeCompact';
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions'; // Icon for stickers/pins menu
-import EmojiSelector from './EmojiSelector'; // Import EmojiSelector
+import EmojiSelector from './EmojiSelector';
+import CleakerLogo from '../CleakerLogo/CleakerLogo';
 
-export default function CleakerAppBar({ isLoggedIn }) {
+export default function CleakerAppBar() {
+  const { isLoggedIn, user, logout } = useAuth();
+  const [showMeCompact, setShowMeCompact] = useState(false);
+  const meCompactRef = useRef(); // Reference for MeCompact
   const navigate = useNavigate();
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [pinsMenuAnchorEl, setPinsMenuAnchorEl] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [showMeCompact, setShowMeCompact] = useState(false);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  const isEmojiSelectorOpen = Boolean(pinsMenuAnchorEl);
+  const [openSideMenuMobile, setOpenSideMenuMobile] = useState(false); // Manage mobile side menu visibility
+  const isMobile = useMediaQuery('(max-width:987px)'); // Check screen size
 
+  // Emoji Selector Handlers
   const handleEmojiButtonClick = (event) => setPinsMenuAnchorEl(event.currentTarget);
   const handleEmojiClose = () => setPinsMenuAnchorEl(null);
 
-  const handleEmojiSelect = (emoji) => {
-    alert(`You selected: ${emoji}`); // Replace with your own action
-    handleEmojiClose();
+  // Logout Handler
+  const handleLogout = () => {
+    logout(() => {
+      navigate('/'); // Redirect after logout
+      setShowMeCompact(false); // Close dropdown
+    });
   };
+
+  // Handle outside click to close MeCompact
+    const handleClickOutside = (event) => {
+      if (meCompactRef.current && !meCompactRef.current.contains(event.target)) {
+        setShowMeCompact(false);
+      }
+    };
+
+  // Handle Mobile Side Menu toggle
+  const handleToggleSideMenuMobile = () => {
+    setOpenSideMenuMobile(!openSideMenuMobile);
+  };
+
+  useEffect(() => {
+    if (showMeCompact) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showMeCompact]);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar 
-        position="fixed" 
-        sx={{ 
-          backgroundColor: 'background.nav', 
-          boxShadow: 'none', 
-          borderBottom: '1px solid', 
-          borderColor: 'divider' 
+     <AppBar
+       position="fixed"
+        sx={{
+        backgroundColor: 'background.nav',
+        boxShadow: 'none',
+        borderBottom: '1px solid',
+        borderColor: 'divider',
+        height: '64px', // Explicit height for the AppBar
+        zIndex: (theme) => theme.zIndex.drawer + 1, // Ensure it stays above any side drawer
         }}
-      >
-        <Toolbar sx={{
-          display: 'flex', 
-          justifyContent: 'space-between', 
-          padding: '0 16px' 
-        }}>
+        >
+        <Toolbar
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            padding: '0 16px',
+          }}
+        >
           {/* Logo Section */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <IconButton edge="start" aria-label="menu" onClick={() => setOpen(true)} sx={{ color: (theme) => theme.palette.icon.main }}>
-              <MenuIcon />
-            </IconButton>
+            {/* Mobile Menu Icon */}
+            {isLoggedIn && isMobile && (
+              <IconButton
+                edge="start"
+                aria-label="menu"
+                onClick={handleToggleSideMenuMobile}
+                sx={{ color: (theme) => theme.palette.icon.main }}
+              >
+                <MenuIcon />
+              </IconButton>
+            )}
             <Box sx={{ display: 'flex', alignItems: 'center', ml: 1 }}>
-              <Link to="https://cleaker.me/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+              <Link
+                to="https://cleaker.me/"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  textDecoration: 'none',
+                }}
+              >
                 <img
                   src="/assets/cleaker_logo_circular.png"
                   alt="cleaker.me"
@@ -62,38 +117,33 @@ export default function CleakerAppBar({ isLoggedIn }) {
             </Box>
           </Box>
 
-          <Box sx={{ flexGrow: 1 }} />
-
+          {/* Logged-In Controls */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {isLoggedIn ? (
               <>
                 <IconButton aria-label="search" onClick={() => setSearchOpen(true)}>
                   <SearchIcon />
                 </IconButton>
-                <IconButton size="large" aria-label="show 17 new notifications">
-                  <Badge badgeContent={17} color="error">
-                    <NotificationsIcon />
-                  </Badge>
+                <IconButton onClick={handleEmojiButtonClick}>
+                  <EmojiEmotionsIcon sx={{ color: 'inherit' }} />
                 </IconButton>
+                <Notifications />
                 <IconButton onClick={() => setShowMeCompact(!showMeCompact)}>
                   <Avatar sx={{ bgcolor: 'primary.main' }}>.me</Avatar>
                 </IconButton>
               </>
             ) : (
               <>
-                <ColorModeIcon />
-                <IconButton onClick={handleEmojiButtonClick}>
-                  <EmojiEmotionsIcon sx={{ color: 'inherit' }} />
-                </IconButton>
+                <CleakerLogo />
               </>
             )}
           </Box>
         </Toolbar>
       </AppBar>
 
-      {/* Render Emoji Selector */}
+      {/* Popovers */}
       <Popover
-        open={isEmojiSelectorOpen}
+        open={Boolean(pinsMenuAnchorEl)}
         anchorEl={pinsMenuAnchorEl}
         onClose={handleEmojiClose}
         anchorOrigin={{
@@ -105,31 +155,41 @@ export default function CleakerAppBar({ isLoggedIn }) {
           horizontal: 'right',
         }}
       >
-        <EmojiSelector onSelect={handleEmojiSelect} />
+        <EmojiSelector />
       </Popover>
 
-      {/* Add MeCompact below AppBar */}
       {showMeCompact && (
-        <Box sx={{
-          position: 'fixed',
-          top: '64px', // Adjust this value based on AppBar height
-          right: '16px',
-          zIndex: 1201,
-          bgcolor: 'background.paper',
-          boxShadow: 3,
-          borderRadius: 2,
-          p: 2,
-        }}>
-          <MeCompact />
-        </Box>
+           <Box
+           ref={meCompactRef} // Attach ref for outside click detection
+           sx={{
+             position: 'fixed',
+             top: '64px',
+             right: '16px',
+             zIndex: 1201,
+             bgcolor: 'background.paper',
+             boxShadow: 3,
+             borderRadius: 2,
+             p: 2,
+           }}
+         >
+           <MeCompact profile={user} onLogout={handleLogout} />
+         </Box>
       )}
 
-      {/* Render mobile menu, search component, etc., below */}
-      {isLoggedIn && (
-        <>
-          <SideMenuMobile open={open} toggleDrawer={setOpen} />
-          <SearchComponent open={searchOpen} onClose={() => setSearchOpen(false)} />
-        </>
+      {/* Mobile Side Menu */}
+      {isLoggedIn && isMobile && (
+        <SideMenuMobile
+          open={openSideMenuMobile}
+          toggleDrawer={(isOpen) => setOpenSideMenuMobile(isOpen)}
+        />
+      )}
+
+      {/* Search */}
+      {searchOpen && (
+        <SearchComponent
+          open={searchOpen}
+          onClose={() => setSearchOpen(false)}
+        />
       )}
     </Box>
   );
