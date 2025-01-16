@@ -1,17 +1,32 @@
 # Node.js modules
 node_modules/
+**/node_modules/
 
-# Environment files
-.env
-.env.*
+# Ignore all .env files
+*.env
+*.env.*
+
+# Do not ignore example .env files
+!*.env.example
+
+# Ignore specific environment directories
+client/env/*
+api/env/*
+
+# Allow example files in those directories
+!client/env/*.env.example
+!api/env/*.env.example
 
 # Logs
 *.log
 logs/
+**/logs/
 
 # Build outputs
 dist/
 build/
+client/dist/
+**/dist/
 
 # Client-specific ignores
 client/node_modules/
@@ -22,17 +37,18 @@ server/node_modules/
 server/dist/
 
 # Packages ignores
-pckgs/cleaker/node_modules/
-pckgs/cleaker/dist/
+modules/cleaker/node_modules/
+modules/cleaker/package-lock.json
+modules/cleaker/dist/
 
 # Temporary files
 *.tmp
 *.swp
 
-# Assets
-client/public/assets/
-
 # Ignore package lock files
-client/package-lock.json
-server/package-lock.json
-pckgs/cleaker/package-lock.json
+package-lock.json
+**/package-lock.json
+
+# Ignore .DS_Store everywhere (macOS metadata files)
+.DS_Store
+**/.DS_Store

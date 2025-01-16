@@ -1,5 +1,5 @@
 {
-  "name": "cleaker.server",
+  "name": "api.cleaker.me",
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
