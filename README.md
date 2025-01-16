@@ -36,5 +36,7 @@ The Vite build for deployment is located at:
 Learn More About Cleaker, visit:
 - [Cleaker](https://cleaker.me)
 - [Neurons](https://neurons.me)
-- ![Cleaker](./web.client/public/assets/neurons_logo.png)
-
+  
+<div style="text-align: center;">
+    <img src="./web.client/public/assets/neurons_logo.png" alt="Cleaker" style="width: 300px;" />
+</div>
