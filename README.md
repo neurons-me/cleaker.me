@@ -37,6 +37,3 @@ Learn More About Cleaker, visit:
 - [Cleaker](https://cleaker.me)
 - [Neurons](https://neurons.me)
   
-<div style="text-align: center;">
-    <img src="./web.client/public/assets/neurons_logo.png" alt="Cleaker" style="width: 300px;" />
-</div>
